@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; frame-src https://www.google.com; script-src 'self'; connect-src 'self'">
+  <title>Luis Badel Sala de Belleza | Salón en Laureles, Medellín</title>
+  <meta name="description" content="Sala de belleza en Laureles, Medellín. Cortes, color, tratamientos y más. Agenda tu cita por WhatsApp.">
+  <link rel="canonical" href="https://cheese9117.github.io/luis-badel/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <header class="navbar" id="navbar">
+    <div class="container navbar__inner">
+      <a href="#top" class="logo">Luis Badel <span>Sala de Belleza</span></a>
+      <nav class="nav" id="nav">
+        <ul class="nav__list">
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#galeria">Galería</a></li>
+          <li><a href="#equipo">Equipo</a></li>
+          <li><a href="#testimonios">Opiniones</a></li>
+          <li><a href="#reservar">Reservar</a></li>
+          <li><a href="#ubicacion">Ubicación</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn--whatsapp" href="https://wa.me/573167302467?text=Hola%2C%20quiero%20agendar%20una%20cita" target="_blank" rel="noopener noreferrer">
+        WhatsApp
+      </a>
+      <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- HERO -->
+    <section class="hero">
+      <!-- Replace with real photo from @luisbadelsaladebelleza -->
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="hero__overlay" aria-hidden="true"></div>
+      <div class="container hero__content reveal">
+        <p class="hero__eyebrow">Laureles · Medellín</p>
+        <h1 class="hero__title">Tu cabello merece lo mejor</h1>
+        <p class="hero__subtitle">Cortes, color y tratamientos en un espacio diseñado para que te sientas en casa.</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#reservar">Reservar cita</a>
+          <a class="btn btn--outline" href="https://wa.me/573167302467?text=Hola%2C%20quiero%20agendar%20una%20cita" target="_blank" rel="noopener noreferrer">Escríbenos</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUST BAR -->
+    <section class="trust">
+      <div class="container trust__grid">
+        <div class="trust__item reveal">
+          <span class="trust__number">4.8★</span>
+          <span class="trust__label">Calificación en Google</span>
+        </div>
+        <div class="trust__item reveal">
+          <span class="trust__number">+10</span>
+          <span class="trust__label">Años de experiencia</span>
+        </div>
+        <div class="trust__item reveal">
+          <span class="trust__number">+2.000</span>
+          <span class="trust__label">Clientes felices</span>
+        </div>
+        <div class="trust__item reveal">
+          <span class="trust__number">Laureles</span>
+          <span class="trust__label">Estadio, Medellín</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section class="services" id="servicios">
+      <div class="container">
+        <p class="section__eyebrow reveal">Lo que hacemos</p>
+        <h2 class="section__title reveal">Servicios</h2>
+        <div class="services__grid">
+          <article class="card reveal">
+            <h3>Corte de cabello</h3>
+            <p>Cortes personalizados para dama y caballero, asesoría de imagen incluida.</p>
+            <span class="card__price">Desde $35.000</span>
+          </article>
+          <article class="card reveal">
+            <h3>Color y tinte</h3>
+            <p>Coloración completa, retoque de raíz y mechas con productos premium.</p>
+            <span class="card__price">Desde $90.000</span>
+          </article>
+          <article class="card reveal">
+            <h3>Manicure y pedicure</h3>
+            <p>Cuidado completo de manos y pies con esmaltado tradicional o semipermanente.</p>
+            <span class="card__price">Desde $40.000</span>
+          </article>
+          <article class="card reveal">
+            <h3>Tratamientos capilares</h3>
+            <p>Hidratación, keratina y reconstrucción para devolverle vida a tu cabello.</p>
+            <span class="card__price">Desde $70.000</span>
+          </article>
+          <article class="card reveal">
+            <h3>Peinados y eventos</h3>
+            <p>Peinados para ocasiones especiales, novias y sesiones fotográficas.</p>
+            <span class="card__price">Desde $80.000</span>
+          </article>
+          <article class="card reveal">
+            <h3>Barbería</h3>
+            <p>Arreglo de barba, diseño y afeitado clásico con toalla caliente.</p>
+            <span class="card__price">Desde $30.000</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERÍA -->
+    <section class="gallery" id="galeria">
+      <div class="container">
+        <p class="section__eyebrow reveal">Nuestro espacio</p>
+        <h2 class="section__title reveal">Galería</h2>
+        <div class="gallery__grid">
+          <!-- Replace with real photos from @luisbadelsaladebelleza -->
+          <div class="gallery__item gallery__item--dark reveal"><span>Recepción</span></div>
+          <div class="gallery__item gallery__item--gold reveal"><span>Estaciones de corte</span></div>
+          <div class="gallery__item gallery__item--sage reveal"><span>Zona de color</span></div>
+          <div class="gallery__item gallery__item--cream reveal"><span>Manicure</span></div>
+          <div class="gallery__item gallery__item--gold reveal"><span>Detalles & arte</span></div>
+          <div class="gallery__item gallery__item--dark reveal"><span>Ambiente</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EQUIPO -->
+    <section class="team" id="equipo">
+      <div class="container">
+        <p class="section__eyebrow reveal">Nuestro equipo</p>
+        <h2 class="section__title reveal">Profesionales a tu servicio</h2>
+        <div class="team__grid">
+          <article class="team__card reveal">
+            <div class="team__photo team__photo--gold" aria-hidden="true"></div>
+            <h3>Luis Badel</h3>
+            <p>Fundador & estilista principal</p>
+          </article>
+          <article class="team__card reveal">
+            <div class="team__photo team__photo--sage" aria-hidden="true"></div>
+            <h3>Daniela Restrepo</h3>
+            <p>Especialista en color</p>
+          </article>
+          <article class="team__card reveal">
+            <div class="team__photo team__photo--dark" aria-hidden="true"></div>
+            <h3>Andrés Gómez</h3>
+            <p>Barbero & estilista</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIOS -->
+    <section class="testimonials" id="testimonios">
+      <div class="container">
+        <p class="section__eyebrow reveal">Opiniones</p>
+        <h2 class="section__title reveal">Lo que dicen nuestros clientes</h2>
+        <div class="testimonials__grid">
+          <blockquote class="testimonial reveal">
+            <p>"Excelente atención, el corte quedó perfecto y el ambiente es muy agradable. Totalmente recomendado."</p>
+            <cite>— Mariana Cardona</cite>
+          </blockquote>
+          <blockquote class="testimonial reveal">
+            <p>"Llevo años yendo donde Luis, siempre sale uno satisfecho. Profesionales y muy puntuales."</p>
+            <cite>— Carlos Zapata</cite>
+          </blockquote>
+          <blockquote class="testimonial reveal">
+            <p>"El mejor lugar de Laureles para un cambio de look. El color me quedó espectacular."</p>
+            <cite>— Valentina Ríos</cite>
+          </blockquote>
+          <blockquote class="testimonial reveal">
+            <p>"Buena ubicación, fácil de llegar y muy buena atención al cliente desde que entras."</p>
+            <cite>— Juan Pablo Mejía</cite>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESERVAR -->
+    <section class="booking" id="reservar">
+      <div class="container booking__grid">
+        <div class="booking__info reveal">
+          <p class="section__eyebrow">Agenda tu cita</p>
+          <h2 class="section__title">Reservar</h2>
+          <p>Escríbenos directamente por WhatsApp o completa el formulario y te confirmaremos tu cita.</p>
+          <a class="btn btn--whatsapp btn--lg" href="https://wa.me/573167302467?text=Hola%2C%20quiero%20agendar%20una%20cita" target="_blank" rel="noopener noreferrer">
+            Escribir por WhatsApp
+          </a>
+        </div>
+        <form class="booking__form reveal" id="bookingForm" novalidate>
+          <div class="form__group">
+            <label for="name">Nombre</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form__group">
+            <label for="service">Servicio</label>
+            <select id="service" name="service" required>
+              <option value="">Selecciona un servicio</option>
+              <option value="Corte de cabello">Corte de cabello</option>
+              <option value="Color y tinte">Color y tinte</option>
+              <option value="Manicure y pedicure">Manicure y pedicure</option>
+              <option value="Tratamientos capilares">Tratamientos capilares</option>
+              <option value="Peinados y eventos">Peinados y eventos</option>
+              <option value="Barbería">Barbería</option>
+            </select>
+          </div>
+          <div class="form__row">
+            <div class="form__group">
+              <label for="date">Fecha</label>
+              <input type="date" id="date" name="date" required>
+            </div>
+            <div class="form__group">
+              <label for="time">Hora</label>
+              <input type="time" id="time" name="time" required>
+            </div>
+          </div>
+          <button type="submit" class="btn btn--primary btn--lg">Enviar a WhatsApp</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- UBICACIÓN -->
+    <section class="location" id="ubicacion">
+      <div class="container location__grid">
+        <div class="location__info reveal">
+          <p class="section__eyebrow">Visítanos</p>
+          <h2 class="section__title">Ubicación y horarios</h2>
+          <p class="location__address">Cra. 78 #54-75, Laureles - Estadio, Medellín</p>
+          <ul class="location__hours">
+            <li><span>Lunes - Sábado</span><span>9:00 a.m. - 7:00 p.m.</span></li>
+            <li><span>Domingo</span><span>10:00 a.m. - 3:00 p.m.</span></li>
+          </ul>
+          <a class="btn btn--outline" href="https://www.instagram.com/luisbadelsaladebelleza" target="_blank" rel="noopener noreferrer">@luisbadelsaladebelleza</a>
+        </div>
+        <div class="location__map reveal">
+          <iframe
+            title="Mapa de Luis Badel Sala de Belleza"
+            src="https://www.google.com/maps?q=Cra.+78+%2354-75,+Laureles+-+Estadio,+Medell%C3%ADn&output=embed"
+            width="100%" height="100%" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <p class="logo">Luis Badel <span>Sala de Belleza</span></p>
+        <p class="footer__tagline">Tu cabello merece lo mejor.</p>
+      </div>
+      <div class="footer__social">
+        <a href="https://www.instagram.com/luisbadelsaladebelleza" target="_blank" rel="noopener noreferrer" aria-label="Instagram">Instagram</a>
+        <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">Facebook</a>
+        <a href="https://wa.me/573167302467" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">WhatsApp</a>
+      </div>
+      <p class="footer__copy">&copy; <span id="year"></span> Luis Badel Sala de Belleza. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="js/nav.js" defer></script>
+  <script src="js/animations.js" defer></script>
+  <script src="js/booking.js" defer></script>
+  <script src="js/footer.js" defer></script>
+</body>
+</html>

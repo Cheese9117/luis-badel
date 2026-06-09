@@ -1,0 +1,22 @@
+:root {
+  --color-bg: #FAFAF8;
+  --color-primary: #1A1A1A;
+  --color-accent: #C4974A;
+  --color-secondary: #6B8F71;
+  --color-card: #F5F0EA;
+  --color-white: #FFFFFF;
+  --color-border: rgba(26, 26, 26, 0.08);
+
+  --font-display: 'Cormorant Garamond', serif;
+  --font-body: 'DM Sans', sans-serif;
+
+  --container-width: 1180px;
+  --radius: 6px;
+  --transition: 0.3s ease;
+
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+  --space-xl: 6rem;
+}
