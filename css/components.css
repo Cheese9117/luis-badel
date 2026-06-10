@@ -495,17 +495,97 @@
 .team__photo--dark { background: linear-gradient(135deg, var(--color-primary), #4a4a4a); }
 
 /* Testimonials */
-.testimonials__grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+.testimonials__carousel {
+  position: relative;
+  padding: 0 var(--space-xl);
+}
+
+.testimonials__track {
+  display: flex;
   gap: var(--space-md);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.testimonials__track::-webkit-scrollbar {
+  display: none;
 }
 
 .testimonial {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
   background: var(--color-card);
   border-left: 3px solid var(--color-accent);
   padding: var(--space-md);
   border-radius: var(--radius);
+}
+
+@media (min-width: 760px) {
+  .testimonial {
+    flex: 0 0 calc(50% - var(--space-md) / 2);
+  }
+}
+
+@media (min-width: 1100px) {
+  .testimonial {
+    flex: 0 0 calc((100% - (2 * var(--space-md))) / 3);
+  }
+}
+
+.testimonials__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  color: var(--color-primary);
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition);
+}
+
+.testimonials__arrow:hover {
+  background: var(--color-accent);
+  color: var(--color-white);
+}
+
+.testimonials__arrow--prev {
+  left: 0;
+}
+
+.testimonials__arrow--next {
+  right: 0;
+}
+
+.testimonials__dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: var(--space-md);
+}
+
+.testimonials__dots button {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: var(--color-border);
+  cursor: pointer;
+  padding: 0;
+  transition: background var(--transition);
+}
+
+.testimonials__dots button.is-active {
+  background: var(--color-accent);
 }
 
 .testimonial p {
@@ -537,47 +617,13 @@
   color: rgba(26,26,26,0.7);
 }
 
-.booking__form {
+.booking__calendar {
   background: var(--color-white);
-  padding: var(--space-md);
   border-radius: var(--radius);
   border: 1px solid var(--color-border);
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-sm);
-}
-
-.form__row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-sm);
-}
-
-.form__group {
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
-}
-
-.form__group label {
-  font-size: 0.85rem;
-  font-weight: 700;
-}
-
-.form__group input,
-.form__group select {
-  padding: 0.65rem 0.75rem;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius);
-  font-family: var(--font-body);
-  font-size: 0.95rem;
-  background: var(--color-bg);
-}
-
-.form__group input:focus,
-.form__group select:focus {
-  outline: 2px solid var(--color-accent);
-  outline-offset: 1px;
+  overflow: hidden;
+  min-height: 600px;
+  width: 100%;
 }
 
 /* Location */

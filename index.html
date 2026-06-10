@@ -151,10 +151,6 @@
           <li><a href="#ubicacion">Ubicación</a></li>
         </ul>
       </nav>
-      <a class="btn btn--whatsapp" href="https://wa.me/573167302467?text=Hola%2C%20quiero%20agendar%20una%20cita" target="_blank" rel="noopener noreferrer">
-        <svg class="icon-svg" viewBox="0 0 32 32" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M16.04 2.67C8.65 2.67 2.67 8.65 2.67 16.04c0 2.55.7 5.03 2.04 7.2L2.67 29.33l6.26-1.97a13.34 13.34 0 0 0 7.11 2.05c7.39 0 13.37-5.98 13.37-13.37S23.43 2.67 16.04 2.67Zm0 24.13c-2.31 0-4.55-.62-6.5-1.79l-.47-.28-3.85 1.21 1.24-3.74-.3-.49a10.78 10.78 0 0 1-1.65-5.67c0-5.96 4.85-10.81 10.81-10.81 2.89 0 5.6 1.13 7.64 3.17a10.74 10.74 0 0 1 3.17 7.64c0 5.96-4.85 10.81-10.81 10.81Zm5.93-8.1c-.32-.16-1.92-.95-2.22-1.06-.3-.11-.52-.16-.74.16-.22.32-.85 1.06-1.04 1.27-.19.22-.38.24-.7.08-.32-.16-1.36-.5-2.59-1.6-.96-.85-1.6-1.91-1.79-2.23-.19-.32-.02-.49.14-.65.14-.14.32-.38.48-.57.16-.19.21-.32.32-.54.11-.22.05-.41-.03-.57-.08-.16-.74-1.78-1.01-2.44-.27-.64-.54-.55-.74-.56h-.63c-.22 0-.57.08-.87.41-.3.32-1.14 1.12-1.14 2.73 0 1.61 1.17 3.17 1.33 3.39.16.22 2.3 3.51 5.57 4.92.78.34 1.39.54 1.86.69.78.25 1.49.21 2.05.13.63-.09 1.92-.78 2.19-1.54.27-.76.27-1.41.19-1.54-.08-.14-.3-.22-.62-.38Z"/></svg>
-        WhatsApp
-      </a>
       <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -383,31 +379,52 @@
       <div class="container">
         <p class="section__eyebrow reveal">Opiniones</p>
         <h2 class="section__title reveal">Lo que dicen nuestros clientes</h2>
-        <div class="testimonials__grid">
-          <blockquote class="testimonial reveal">
-            <span class="testimonial__stars" aria-hidden="true">★★★★★</span>
-            <p>"El servicio es excelente, Luis es un gran profesional además te hace recomendaciones súper buenas. La atención es 10/10"</p>
-            <cite>— Mary Duarte Herrera</cite>
-            <span class="testimonial__source">Google Maps</span>
-          </blockquote>
-          <blockquote class="testimonial reveal">
-            <span class="testimonial__stars" aria-hidden="true">★★★★★</span>
-            <p>"Ubicación fantástica. Gente estupenda, excelente servicio y precios increíbles para todos los excelentes servicios que ofrece. Desde el estilista hasta las uñas y el café y té que te ofrecen a tu llegada, este lugar es genial. Muy recomendable."</p>
-            <cite>— Manny Turino</cite>
-            <span class="testimonial__source">Google Maps</span>
-          </blockquote>
-          <blockquote class="testimonial reveal">
-            <span class="testimonial__stars" aria-hidden="true">★★★★★</span>
-            <p>"Es cómodo, con todos los protocolos, excelente atención y muy buen trabajo cabello y uñas. Recomendable."</p>
-            <cite>— Ingrid Torres</cite>
-            <span class="testimonial__source">Google Maps</span>
-          </blockquote>
-          <blockquote class="testimonial reveal">
-            <span class="testimonial__stars" aria-hidden="true">★★★★★</span>
-            <p>"¡Más que recomendado! Excelente servicio, productos de calidad que cuidan nuestro cabello. ¡Quedé feliz!"</p>
-            <cite>— Yuli Becerra Hoyos</cite>
-            <span class="testimonial__source">Google Maps</span>
-          </blockquote>
+        <div class="testimonials__carousel reveal">
+          <div class="testimonials__track" id="testimonialsTrack">
+            <blockquote class="testimonial">
+              <span class="testimonial__stars" aria-hidden="true">★★★★★</span>
+              <p>"El servicio es excelente, Luis es un gran profesional además te hace recomendaciones súper buenas. La atención es 10/10"</p>
+              <cite>— Mary Duarte Herrera</cite>
+              <span class="testimonial__source">Google Maps</span>
+            </blockquote>
+            <blockquote class="testimonial">
+              <span class="testimonial__stars" aria-hidden="true">★★★★★</span>
+              <p>"Ubicación fantástica. Gente estupenda, excelente servicio y precios increíbles para todos los excelentes servicios que ofrece. Desde el estilista hasta las uñas y el café y té que te ofrecen a tu llegada, este lugar es genial. Muy recomendable."</p>
+              <cite>— Manny Turino</cite>
+              <span class="testimonial__source">Google Maps</span>
+            </blockquote>
+            <blockquote class="testimonial">
+              <span class="testimonial__stars" aria-hidden="true">★★★★★</span>
+              <p>"Es cómodo, con todos los protocolos, excelente atención y muy buen trabajo cabello y uñas. Recomendable."</p>
+              <cite>— Ingrid Torres</cite>
+              <span class="testimonial__source">Google Maps</span>
+            </blockquote>
+            <blockquote class="testimonial">
+              <span class="testimonial__stars" aria-hidden="true">★★★★★</span>
+              <p>"¡Más que recomendado! Excelente servicio, productos de calidad que cuidan nuestro cabello. ¡Quedé feliz!"</p>
+              <cite>— Yuli Becerra Hoyos</cite>
+              <span class="testimonial__source">Google Maps</span>
+            </blockquote>
+            <blockquote class="testimonial">
+              <span class="testimonial__stars" aria-hidden="true">★★★★★</span>
+              <p>"Una de las mejores salas de belleza de Medellín."</p>
+              <cite>— José Fredy Cortes Zuleta</cite>
+              <span class="testimonial__source">Google Maps</span>
+            </blockquote>
+            <blockquote class="testimonial">
+              <span class="testimonial__stars" aria-hidden="true">★★★★★</span>
+              <p>"Un lugar tranquilo, fresco y la atención increíble."</p>
+              <cite>— Elis Alejandro Acevedo Vides</cite>
+              <span class="testimonial__source">Google Maps</span>
+            </blockquote>
+          </div>
+          <button class="testimonials__arrow testimonials__arrow--prev" id="testimonialsPrev" aria-label="Opinión anterior">
+            <svg viewBox="0 0 10 16" width="10" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 1 2 8l7 7"/></svg>
+          </button>
+          <button class="testimonials__arrow testimonials__arrow--next" id="testimonialsNext" aria-label="Opinión siguiente">
+            <svg viewBox="0 0 10 16" width="10" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m1 1 7 7-7 7"/></svg>
+          </button>
+          <div class="testimonials__dots" id="testimonialsDots"></div>
         </div>
       </div>
     </section>
@@ -418,44 +435,12 @@
         <div class="booking__info reveal">
           <p class="section__eyebrow">Agenda tu cita</p>
           <h2 class="section__title">Reservar</h2>
-          <p>Escríbenos directamente por WhatsApp o completa el formulario y te confirmaremos tu cita.</p>
+          <p>Elige el servicio, la fecha y la hora que mejor te queden. También puedes escribirnos directamente por WhatsApp.</p>
           <a class="btn btn--whatsapp btn--lg" href="https://wa.me/573167302467?text=Hola%2C%20quiero%20agendar%20una%20cita" target="_blank" rel="noopener noreferrer">
             Escribir por WhatsApp
           </a>
         </div>
-        <form class="booking__form reveal" id="bookingForm" novalidate>
-          <div class="form__group">
-            <label for="name">Nombre completo</label>
-            <input type="text" id="name" name="name" placeholder="Tu nombre" autocomplete="name" required>
-          </div>
-          <div class="form__group">
-            <label for="phone">WhatsApp / Teléfono</label>
-            <input type="tel" id="phone" name="phone" placeholder="Ej: 3001234567" autocomplete="tel" inputmode="numeric">
-          </div>
-          <div class="form__group">
-            <label for="service">Servicio</label>
-            <select id="service" name="service" required>
-              <option value="">Selecciona un servicio</option>
-              <option value="Corte de cabello">Corte de cabello — desde $35.000</option>
-              <option value="Color y tinte">Color y tinte — desde $90.000</option>
-              <option value="Manicure y pedicure">Manicure y pedicure — desde $40.000</option>
-              <option value="Tratamientos capilares">Tratamientos capilares — desde $70.000</option>
-              <option value="Peinados y eventos">Peinados y eventos — desde $80.000</option>
-              <option value="Barbería">Barbería — desde $30.000</option>
-            </select>
-          </div>
-          <div class="form__row">
-            <div class="form__group">
-              <label for="date">Fecha</label>
-              <input type="date" id="date" name="date" required>
-            </div>
-            <div class="form__group">
-              <label for="time">Hora preferida</label>
-              <input type="time" id="time" name="time" min="09:00" max="19:00" required>
-            </div>
-          </div>
-          <button type="submit" class="btn btn--primary btn--lg">Enviar a WhatsApp</button>
-        </form>
+        <div class="booking__calendar reveal" id="cal-booking"></div>
       </div>
     </section>
 
@@ -545,8 +530,12 @@
 
   <script src="js/nav.js" defer></script>
   <script src="js/animations.js" defer></script>
-  <script src="js/booking.js" defer></script>
+  <script src="js/testimonials.js" defer></script>
   <script src="js/footer.js" defer></script>
+
+  <!-- ═══ CAL.COM — RESERVAS ═══ -->
+  <!-- IMPORTANTE: reemplazar "luis-badel/cita" por el enlace real de tu evento en Cal.com -->
+  <script src="js/cal-embed.js" defer></script>
 </body>
 </html>
 

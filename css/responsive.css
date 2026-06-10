@@ -66,10 +66,6 @@
     grid-template-columns: 1fr;
   }
 
-  .form__row {
-    grid-template-columns: 1fr;
-  }
-
   .hero__actions {
     flex-direction: column;
     align-items: flex-start;
@@ -171,13 +167,6 @@
   }
 }
 
-/* Testimonios — 1 columna en móvil */
-@media (max-width: 640px) {
-  .testimonials__grid {
-    grid-template-columns: 1fr;
-  }
-}
-
 /* Booking — padding reducido */
 @media (max-width: 560px) {
   .booking__grid {
@@ -189,9 +178,19 @@
     text-align: center;
   }
 
-  .form__group input,
-  .form__group select {
-    font-size: 16px; /* evita zoom automático en iOS */
+  .booking__calendar {
+    min-height: 500px;
+  }
+}
+
+/* Testimonios — flechas ocultas en móvil, padding reducido */
+@media (max-width: 640px) {
+  .testimonials__carousel {
+    padding: 0;
+  }
+
+  .testimonials__arrow {
+    display: none;
   }
 }
 
