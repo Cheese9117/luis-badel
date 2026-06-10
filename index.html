@@ -145,6 +145,12 @@
           <li><a href="#ubicacion">Ubicación</a></li>
         </ul>
       </nav>
+      <button type="button" class="nav__cart" id="cartToggle" aria-haspopup="dialog" aria-expanded="false" aria-controls="cartDrawer" aria-label="Ver tu pedido">
+        <svg class="nav__cart-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+          <path d="M3 3h2l.4 2M7 13h10l3-7H5.4M7 13 5.4 5M7 13l-1.4 2.8A1 1 0 0 0 6.5 17H17M9 21a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm9 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z"/>
+        </svg>
+        <span class="nav__cart-badge" id="cartBadge" hidden>0</span>
+      </button>
       <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -530,10 +536,32 @@
     </span>
   </a>
 
+  <!-- ═══ PEDIDO / CARRITO ═══ -->
+  <div class="cart-drawer" id="cartDrawer" role="dialog" aria-modal="true" aria-labelledby="cartTitle" aria-hidden="true">
+    <div class="cart-drawer__backdrop" id="cartBackdrop"></div>
+    <div class="cart-drawer__panel">
+      <div class="cart-drawer__header">
+        <h2 id="cartTitle">Tu pedido</h2>
+        <button type="button" class="cart-drawer__close" id="cartClose" aria-label="Cerrar pedido">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+      <p class="cart-drawer__empty" id="cartEmpty">Aún no has agregado productos a tu pedido.</p>
+      <ul class="cart-drawer__list" id="cartList"></ul>
+      <div class="cart-drawer__footer">
+        <button type="button" class="btn btn--outline" id="cartClear">Vaciar pedido</button>
+        <a class="btn btn--whatsapp" id="cartCheckout" href="https://wa.me/573167302467" target="_blank" rel="noopener noreferrer">
+          Enviar pedido por WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+
   <script src="js/nav.js" defer></script>
   <script src="js/animations.js" defer></script>
   <script src="js/counters.js" defer></script>
   <script src="js/testimonials.js" defer></script>
+  <script src="js/cart.js" defer></script>
   <script src="js/footer.js" defer></script>
 
   <!-- ═══ CAL.COM — RESERVAS ═══ -->
