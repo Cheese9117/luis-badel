@@ -24,4 +24,16 @@
       toggle.setAttribute('aria-expanded', 'false');
     });
   });
+
+  // Dropdown toggle en móvil
+  document.querySelectorAll('.nav__item--dropdown').forEach(function(item) {
+    var parent = item.querySelector('.nav__link--parent');
+    if (!parent) return;
+    parent.addEventListener('click', function(e) {
+      if (window.innerWidth <= 900) {
+        e.preventDefault();
+        item.classList.toggle('is-open');
+      }
+    });
+  });
 })();

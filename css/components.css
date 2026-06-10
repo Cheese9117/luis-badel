@@ -36,12 +36,12 @@
 }
 
 .btn--whatsapp {
-  background: var(--color-secondary);
+  background: #25D366;
   color: var(--color-white);
 }
 
 .btn--whatsapp:hover {
-  background: #5a7a60;
+  background: #1ebe57;
 }
 
 .btn--lg {
@@ -891,4 +891,90 @@
 .page-hero .hero__subtitle {
   color: rgba(255,255,255,0.8);
   margin: 0 auto;
+}
+
+/* === DROPDOWN NAVEGACIÓN === */
+.nav__item--dropdown {
+  position: relative;
+}
+
+.nav__link--parent {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.nav__chevron {
+  transition: transform 0.25s ease;
+  flex-shrink: 0;
+}
+
+.nav__item--dropdown:hover .nav__chevron {
+  transform: rotate(180deg);
+}
+
+.nav__dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  min-width: 200px;
+  box-shadow: 0 8px 24px rgba(26,26,26,0.10);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  transform: translateX(-50%) translateY(-4px);
+  z-index: 100;
+  list-style: none;
+  padding: 6px 0;
+}
+
+.nav__item--dropdown:hover .nav__dropdown {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+
+.nav__dropdown-link {
+  display: block;
+  padding: 10px 18px;
+  font-size: 0.9rem;
+  color: var(--color-primary);
+  transition: background var(--transition), color var(--transition);
+  white-space: nowrap;
+}
+
+.nav__dropdown-link:hover {
+  background: var(--color-card);
+  color: var(--color-accent);
+}
+
+/* Mobile: dropdown como lista expandida */
+@media (max-width: 900px) {
+  .nav__dropdown {
+    position: static;
+    opacity: 1;
+    pointer-events: auto;
+    transform: none;
+    box-shadow: none;
+    border: none;
+    border-left: 2px solid var(--color-accent);
+    border-radius: 0;
+    background: transparent;
+    padding: 0 0 0 12px;
+    margin-top: 4px;
+    display: none;
+  }
+
+  .nav__item--dropdown.is-open .nav__dropdown {
+    display: block;
+  }
+
+  .nav__chevron {
+    margin-left: auto;
+  }
 }
