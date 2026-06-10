@@ -27,15 +27,9 @@
   };
 })(window, 'https://app.cal.com/embed/embed.js', 'init');
 
-Cal('init', 'cita', { origin: 'https://cal.com' });
+Cal('init', 'reservar-cita', { origin: 'https://cal.com' });
 
-Cal.ns.cita('inline', {
-  elementOrSelector: '#cal-booking',
-  config: { layout: 'month_view', theme: 'light' },
-  calLink: 'cheese9117/reservar-cita',
-});
-
-Cal.ns.cita('ui', {
+Cal.ns['reservar-cita']('ui', {
   hideEventTypeDetails: false,
   layout: 'month_view',
 });

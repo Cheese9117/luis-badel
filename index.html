@@ -431,16 +431,24 @@
 
     <!-- RESERVAR -->
     <section class="booking" id="reservar">
-      <div class="container booking__grid">
-        <div class="booking__info reveal">
-          <p class="section__eyebrow">Agenda tu cita</p>
-          <h2 class="section__title">Reservar</h2>
-          <p>Elige el servicio, la fecha y la hora que mejor te queden. También puedes escribirnos directamente por WhatsApp.</p>
+      <div class="container booking__content reveal">
+        <p class="section__eyebrow">Agenda tu cita</p>
+        <h2 class="section__title">Reservar</h2>
+        <p>Elige el servicio, la fecha y la hora que mejor te queden, o escríbenos directamente por WhatsApp.</p>
+        <div class="booking__actions">
+          <button
+            type="button"
+            class="btn btn--primary btn--lg"
+            data-cal-namespace="reservar-cita"
+            data-cal-link="cheese9117/reservar-cita"
+            data-cal-config='{"layout":"month_view"}'
+          >
+            Reservar cita online
+          </button>
           <a class="btn btn--whatsapp btn--lg" href="https://wa.me/573167302467?text=Hola%2C%20quiero%20agendar%20una%20cita" target="_blank" rel="noopener noreferrer">
             Escribir por WhatsApp
           </a>
         </div>
-        <div class="booking__calendar reveal" id="cal-booking"></div>
       </div>
     </section>
 

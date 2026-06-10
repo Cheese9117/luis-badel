@@ -46,7 +46,6 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .booking__grid,
   .location__grid {
     grid-template-columns: 1fr;
   }
@@ -167,19 +166,15 @@
   }
 }
 
-/* Booking — padding reducido */
+/* Booking — botones apilados en móvil */
 @media (max-width: 560px) {
-  .booking__grid {
-    gap: 2rem;
+  .booking__actions {
+    flex-direction: column;
+    align-items: stretch;
   }
 
-  .booking__info .btn--lg {
-    width: 100%;
+  .booking__actions .btn {
     text-align: center;
-  }
-
-  .booking__calendar {
-    min-height: 500px;
   }
 }
 
