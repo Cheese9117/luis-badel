@@ -110,7 +110,7 @@
 <body>
 
   <div class="announcement">
-    <p>✨ Agenda tu cita por WhatsApp · +57 316 7302467 · Laureles, Medellín</p>
+    <p data-i18n="announcement.text">✨ Agenda tu cita por WhatsApp · +57 316 7302467 · Laureles, Medellín</p>
   </div>
 
   <header class="navbar" id="navbar">
@@ -125,33 +125,37 @@
       </a>
       <nav class="nav" id="nav">
         <ul class="nav__list">
-          <li><a href="#servicios">Servicios</a></li>
-          <li><a href="#galeria">Galería</a></li>
+          <li><a href="#servicios" data-i18n="nav.services">Servicios</a></li>
+          <li><a href="#galeria" data-i18n="nav.gallery">Galería</a></li>
           <li class="nav__item nav__item--dropdown">
             <a href="#productos" class="nav__link nav__link--parent">
-              Productos
+              <span data-i18n="nav.products">Productos</span>
               <svg class="nav__chevron" viewBox="0 0 10 6" width="10" height="6" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg>
             </a>
             <ul class="nav__dropdown">
-              <li><a href="#productos" class="nav__dropdown-link">Todos los productos</a></li>
-              <li><a href="productos.html#cuidado-capilar" class="nav__dropdown-link">Cuidado capilar</a></li>
-              <li><a href="productos.html#tratamientos" class="nav__dropdown-link">Tratamientos</a></li>
-              <li><a href="productos.html#styling" class="nav__dropdown-link">Styling y acabado</a></li>
+              <li><a href="#productos" class="nav__dropdown-link" data-i18n="nav.products.all">Todos los productos</a></li>
+              <li><a href="productos.html#cuidado-capilar" class="nav__dropdown-link" data-i18n="nav.products.haircare">Cuidado capilar</a></li>
+              <li><a href="productos.html#tratamientos" class="nav__dropdown-link" data-i18n="nav.products.treatments">Tratamientos</a></li>
+              <li><a href="productos.html#styling" class="nav__dropdown-link" data-i18n="nav.products.styling">Styling y acabado</a></li>
             </ul>
           </li>
-          <li><a href="#equipo">Equipo</a></li>
-          <li><a href="#testimonios">Opiniones</a></li>
-          <li><a href="#reservar">Reservar</a></li>
-          <li><a href="#ubicacion">Ubicación</a></li>
+          <li><a href="#equipo" data-i18n="nav.team">Equipo</a></li>
+          <li><a href="#testimonios" data-i18n="nav.testimonials">Opiniones</a></li>
+          <li><a href="#reservar" data-i18n="nav.booking">Reservar</a></li>
+          <li><a href="#ubicacion" data-i18n="nav.location">Ubicación</a></li>
         </ul>
       </nav>
-      <button type="button" class="nav__cart" id="cartToggle" aria-haspopup="dialog" aria-expanded="false" aria-controls="cartDrawer" aria-label="Ver tu pedido">
+      <div class="lang-switch" role="group" aria-label="Idioma / Language">
+        <button type="button" class="lang-switch__btn" data-lang-option="es" aria-pressed="false">ES</button>
+        <button type="button" class="lang-switch__btn" data-lang-option="en" aria-pressed="false">EN</button>
+      </div>
+      <button type="button" class="nav__cart" id="cartToggle" aria-haspopup="dialog" aria-expanded="false" aria-controls="cartDrawer" data-i18n-attr='{"aria-label":"nav.cartAria"}' aria-label="Ver tu pedido">
         <svg class="nav__cart-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
           <path d="M3 3h2l.4 2M7 13h10l3-7H5.4M7 13 5.4 5M7 13l-1.4 2.8A1 1 0 0 0 6.5 17H17M9 21a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm9 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z"/>
         </svg>
         <span class="nav__cart-badge" id="cartBadge" hidden>0</span>
       </button>
-      <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+      <button class="nav__toggle" id="navToggle" data-i18n-attr='{"aria-label":"nav.menuAria"}' aria-label="Abrir menú" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -164,12 +168,12 @@
       <img class="hero__bg" src="assets/images/foto-hero.jpg" alt="Fachada e interior de Luis Badel Sala de Belleza" width="1600" height="900">
       <div class="hero__overlay" aria-hidden="true"></div>
       <div class="container hero__content reveal">
-        <p class="hero__eyebrow">Laureles · Medellín</p>
-        <h1 class="hero__title">Tu cabello merece lo mejor</h1>
-        <p class="hero__subtitle">Cortes, color y tratamientos en un espacio diseñado para que te sientas en casa.</p>
+        <p class="hero__eyebrow" data-i18n="hero.location">Laureles · Medellín</p>
+        <h1 class="hero__title" data-i18n="hero.title">Tu cabello merece lo mejor</h1>
+        <p class="hero__subtitle" data-i18n="hero.subtitle">Cortes, color y tratamientos en un espacio diseñado para que te sientas en casa.</p>
         <div class="hero__actions">
-          <a class="btn btn--primary" href="#reservar">Reservar cita</a>
-          <a class="btn btn--outline" href="https://wa.me/573167302467?text=Hola%2C%20quiero%20agendar%20una%20cita" target="_blank" rel="noopener noreferrer">Escríbenos</a>
+          <a class="btn btn--primary" href="#reservar" data-i18n="hero.book">Reservar cita</a>
+          <a class="btn btn--outline" href="https://wa.me/573167302467?text=Hola%2C%20quiero%20agendar%20una%20cita" target="_blank" rel="noopener noreferrer" data-i18n="hero.whatsapp">Escríbenos</a>
         </div>
       </div>
     </section>
@@ -180,19 +184,19 @@
         <div class="trust__item reveal">
           <span class="trust__stars" aria-hidden="true">★★★★☆</span>
           <span class="trust__number" data-counter data-counter-end="4.6" data-counter-decimals="1" data-counter-suffix="★">0★</span>
-          <span class="trust__label">+50 opiniones en Google</span>
+          <span class="trust__label" data-i18n="trust.reviews">+50 opiniones en Google</span>
         </div>
         <div class="trust__item reveal">
           <span class="trust__number" data-counter data-counter-end="18" data-counter-prefix="+">+0</span>
-          <span class="trust__label">Años de experiencia</span>
+          <span class="trust__label" data-i18n="trust.experience">Años de experiencia</span>
         </div>
         <div class="trust__item reveal">
           <span class="trust__number" data-counter data-counter-end="2000" data-counter-prefix="+" data-counter-thousands="." data-counter-decimals="0">+0</span>
-          <span class="trust__label">Clientes felices</span>
+          <span class="trust__label" data-i18n="trust.clients">Clientes felices</span>
         </div>
         <div class="trust__item reveal">
           <span class="trust__number">Laureles</span>
-          <span class="trust__label">Estadio, Medellín</span>
+          <span class="trust__label" data-i18n="trust.locationLabel">Estadio, Medellín</span>
         </div>
       </div>
     </section>
@@ -200,49 +204,49 @@
     <!-- SOBRE NOSOTROS -->
     <section class="about">
       <div class="container about__inner reveal">
-        <p>Más de 18 años transformando looks en Laureles. Un espacio donde la belleza y el cuidado personal se encuentran.</p>
+        <p data-i18n="about.text">Más de 18 años transformando looks en Laureles. Un espacio donde la belleza y el cuidado personal se encuentran.</p>
       </div>
     </section>
 
     <!-- SERVICIOS -->
     <section class="services" id="servicios">
       <div class="container">
-        <p class="section__eyebrow reveal">Lo que hacemos</p>
-        <h2 class="section__title reveal">Servicios</h2>
+        <p class="section__eyebrow reveal" data-i18n="services.eyebrow">Lo que hacemos</p>
+        <h2 class="section__title reveal" data-i18n="services.title">Servicios</h2>
         <div class="services__grid">
           <article class="card reveal">
-            <h3>Corte de cabello</h3>
-            <p>Cortes personalizados para dama y caballero, asesoría de imagen incluida.</p>
-            <span class="card__price">Desde $35.000</span>
+            <h3 data-i18n="service.haircut.title">Corte de cabello</h3>
+            <p data-i18n="service.haircut.desc">Cortes personalizados para dama y caballero, asesoría de imagen incluida.</p>
+            <span class="card__price" data-i18n="service.haircut.price">Desde $35.000</span>
           </article>
           <article class="card reveal">
-            <h3>Color y tinte</h3>
-            <p>Coloración completa, retoque de raíz y mechas con productos premium.</p>
-            <span class="card__price">Desde $90.000</span>
+            <h3 data-i18n="service.color.title">Color y tinte</h3>
+            <p data-i18n="service.color.desc">Coloración completa, retoque de raíz y mechas con productos premium.</p>
+            <span class="card__price" data-i18n="service.color.price">Desde $90.000</span>
           </article>
           <article class="card reveal">
-            <h3>Manicure y pedicure</h3>
-            <p>Cuidado completo de manos y pies con esmaltado tradicional o semipermanente.</p>
-            <span class="card__price">Desde $40.000</span>
+            <h3 data-i18n="service.manicure.title">Manicure y pedicure</h3>
+            <p data-i18n="service.manicure.desc">Cuidado completo de manos y pies con esmaltado tradicional o semipermanente.</p>
+            <span class="card__price" data-i18n="service.manicure.price">Desde $40.000</span>
           </article>
           <article class="card reveal">
-            <h3>Tratamientos capilares</h3>
-            <p>Hidratación, keratina y reconstrucción para devolverle vida a tu cabello.</p>
-            <span class="card__price">Desde $70.000</span>
+            <h3 data-i18n="service.treatments.title">Tratamientos capilares</h3>
+            <p data-i18n="service.treatments.desc">Hidratación, keratina y reconstrucción para devolverle vida a tu cabello.</p>
+            <span class="card__price" data-i18n="service.treatments.price">Desde $70.000</span>
           </article>
           <article class="card reveal">
-            <h3>Peinados y eventos</h3>
-            <p>Peinados para ocasiones especiales, novias y sesiones fotográficas.</p>
-            <span class="card__price">Desde $80.000</span>
+            <h3 data-i18n="service.styling.title">Peinados y eventos</h3>
+            <p data-i18n="service.styling.desc">Peinados para ocasiones especiales, novias y sesiones fotográficas.</p>
+            <span class="card__price" data-i18n="service.styling.price">Desde $80.000</span>
           </article>
           <article class="card reveal">
-            <h3>Barbería</h3>
-            <p>Arreglo de barba, diseño y afeitado clásico con toalla caliente.</p>
-            <span class="card__price">Desde $30.000</span>
+            <h3 data-i18n="service.barber.title">Barbería</h3>
+            <p data-i18n="service.barber.desc">Arreglo de barba, diseño y afeitado clásico con toalla caliente.</p>
+            <span class="card__price" data-i18n="service.barber.price">Desde $30.000</span>
           </article>
         </div>
         <p class="services__more reveal">
-          <a href="https://wa.me/573167302467?text=Hola%2C%20quiero%20conocer%20todos%20los%20servicios%20disponibles" target="_blank" rel="noopener noreferrer">Ver todos los servicios →</a>
+          <a href="https://wa.me/573167302467?text=Hola%2C%20quiero%20conocer%20todos%20los%20servicios%20disponibles" target="_blank" rel="noopener noreferrer" data-i18n="services.viewAll">Ver todos los servicios →</a>
         </p>
       </div>
     </section>
@@ -250,32 +254,32 @@
     <!-- GALERÍA -->
     <section class="gallery" id="galeria">
       <div class="container">
-        <p class="section__eyebrow reveal">Nuestro espacio</p>
-        <h2 class="section__title reveal">Galería</h2>
+        <p class="section__eyebrow reveal" data-i18n="gallery.eyebrow">Nuestro espacio</p>
+        <h2 class="section__title reveal" data-i18n="gallery.title">Galería</h2>
         <div class="gallery__grid">
           <figure class="gallery__item reveal">
-            <img src="assets/images/foto-1.jpg" alt="Interior del salón Luis Badel" width="800" height="600" loading="lazy">
-            <figcaption>Interior del salón</figcaption>
+            <img src="assets/images/foto-1.jpg" alt="Interior del salón Luis Badel" data-i18n-attr='{"alt":"gallery.alt1"}' width="800" height="600" loading="lazy">
+            <figcaption data-i18n="gallery.caption1">Interior del salón</figcaption>
           </figure>
           <figure class="gallery__item reveal">
-            <img src="assets/images/foto-2.jpg" alt="Zona de coloración del salón" width="800" height="600" loading="lazy">
-            <figcaption>Zona de coloración</figcaption>
+            <img src="assets/images/foto-2.jpg" alt="Zona de coloración del salón" data-i18n-attr='{"alt":"gallery.alt2"}' width="800" height="600" loading="lazy">
+            <figcaption data-i18n="gallery.caption2">Zona de coloración</figcaption>
           </figure>
           <figure class="gallery__item reveal">
-            <img src="assets/images/foto-3.jpg" alt="Trabajos de color realizados en el salón" width="800" height="600" loading="lazy">
-            <figcaption>Trabajos de color</figcaption>
+            <img src="assets/images/foto-3.jpg" alt="Trabajos de color realizados en el salón" data-i18n-attr='{"alt":"gallery.alt3"}' width="800" height="600" loading="lazy">
+            <figcaption data-i18n="gallery.caption3">Trabajos de color</figcaption>
           </figure>
           <figure class="gallery__item reveal">
-            <img src="assets/images/foto-4.jpg" alt="Cortes y estilizado realizados en el salón" width="800" height="600" loading="lazy">
-            <figcaption>Cortes y estilizado</figcaption>
+            <img src="assets/images/foto-4.jpg" alt="Cortes y estilizado realizados en el salón" data-i18n-attr='{"alt":"gallery.alt4"}' width="800" height="600" loading="lazy">
+            <figcaption data-i18n="gallery.caption4">Cortes y estilizado</figcaption>
           </figure>
           <figure class="gallery__item reveal">
-            <img src="assets/images/foto-5.jpg" alt="Servicio de manicure y pedicure" width="800" height="600" loading="lazy">
-            <figcaption>Manicure y pedicure</figcaption>
+            <img src="assets/images/foto-5.jpg" alt="Servicio de manicure y pedicure" data-i18n-attr='{"alt":"gallery.alt5"}' width="800" height="600" loading="lazy">
+            <figcaption data-i18n="gallery.caption5">Manicure y pedicure</figcaption>
           </figure>
           <figure class="gallery__item reveal">
-            <img src="assets/images/foto-6.jpg" alt="Ambiente y detalles decorativos del salón" width="800" height="600" loading="lazy">
-            <figcaption>Ambiente y detalles</figcaption>
+            <img src="assets/images/foto-6.jpg" alt="Ambiente y detalles decorativos del salón" data-i18n-attr='{"alt":"gallery.alt6"}' width="800" height="600" loading="lazy">
+            <figcaption data-i18n="gallery.caption6">Ambiente y detalles</figcaption>
           </figure>
         </div>
       </div>
@@ -284,96 +288,96 @@
     <!-- PRODUCTOS -->
     <section class="products" id="productos">
       <div class="container">
-        <p class="section__eyebrow reveal">Disponibles en nuestro salón</p>
-        <h2 class="section__title reveal">Productos para el cuidado de tu cabello</h2>
+        <p class="section__eyebrow reveal" data-i18n="products.eyebrow">Disponibles en nuestro salón</p>
+        <h2 class="section__title reveal" data-i18n="products.title">Productos para el cuidado de tu cabello</h2>
         <div class="products__grid">
           <article class="card product-card reveal">
-            <span class="product-card__badge">Disponible en salón</span>
+            <span class="product-card__badge" data-i18n="product.badge">Disponible en salón</span>
             <span class="product-card__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 2h6v3.5l1.5 2.5v12a1 1 0 0 1-1 1h-7a1 1 0 0 1-1-1V8L9 5.5V2Z"/><path d="M7.5 12h9"/></svg>
             </span>
-            <h3>Shampoos profesionales</h3>
-            <p>Limpieza suave para todo tipo de cabello.</p>
+            <h3 data-i18n="product.shampoos.name">Shampoos profesionales</h3>
+            <p data-i18n="product.shampoos.desc">Limpieza suave para todo tipo de cabello.</p>
             <div class="product-card__actions">
-              <a class="btn btn--outline" href="https://wa.me/573167302467?text=Hola%2C%20quiero%20consultar%20sobre%20productos%20de%20Shampoos%20profesionales" target="_blank" rel="noopener noreferrer">Consultar</a>
-              <button type="button" class="btn btn--primary product-card__add" data-cart-add data-product-name="Shampoos profesionales">
+              <a class="btn btn--outline" href="https://wa.me/573167302467?text=Hola%2C%20quiero%20consultar%20sobre%20productos%20de%20Shampoos%20profesionales" target="_blank" rel="noopener noreferrer" data-i18n="product.consult">Consultar</a>
+              <button type="button" class="btn btn--primary product-card__add" data-cart-add data-product-name="Shampoos profesionales" data-i18n="product.add" data-i18n-attr='{"data-product-name":"product.shampoos.name"}'>
                 Agregar al pedido
               </button>
             </div>
           </article>
           <article class="card product-card reveal">
-            <span class="product-card__badge">Disponible en salón</span>
+            <span class="product-card__badge" data-i18n="product.badge">Disponible en salón</span>
             <span class="product-card__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
             </span>
-            <h3>Mascarillas capilares</h3>
-            <p>Hidratación y reparación profunda.</p>
+            <h3 data-i18n="product.mascarillas.name">Mascarillas capilares</h3>
+            <p data-i18n="product.mascarillas.desc">Hidratación y reparación profunda.</p>
             <div class="product-card__actions">
-              <a class="btn btn--outline" href="https://wa.me/573167302467?text=Hola%2C%20quiero%20consultar%20sobre%20productos%20de%20Mascarillas%20capilares" target="_blank" rel="noopener noreferrer">Consultar</a>
-              <button type="button" class="btn btn--primary product-card__add" data-cart-add data-product-name="Mascarillas capilares">
+              <a class="btn btn--outline" href="https://wa.me/573167302467?text=Hola%2C%20quiero%20consultar%20sobre%20productos%20de%20Mascarillas%20capilares" target="_blank" rel="noopener noreferrer" data-i18n="product.consult">Consultar</a>
+              <button type="button" class="btn btn--primary product-card__add" data-cart-add data-product-name="Mascarillas capilares" data-i18n="product.add" data-i18n-attr='{"data-product-name":"product.mascarillas.name"}'>
                 Agregar al pedido
               </button>
             </div>
           </article>
           <article class="card product-card reveal">
-            <span class="product-card__badge">Disponible en salón</span>
+            <span class="product-card__badge" data-i18n="product.badge">Disponible en salón</span>
             <span class="product-card__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2 9.5 7 4 8l4 4-1 6 5-3 5 3-1-6 4-4-5.5-1Z"/></svg>
             </span>
-            <h3>Aceites y serums</h3>
-            <p>Brillo y control del frizz.</p>
+            <h3 data-i18n="product.aceites.name">Aceites y serums</h3>
+            <p data-i18n="product.aceites.desc">Brillo y control del frizz.</p>
             <div class="product-card__actions">
-              <a class="btn btn--outline" href="https://wa.me/573167302467?text=Hola%2C%20quiero%20consultar%20sobre%20productos%20de%20Aceites%20y%20serums" target="_blank" rel="noopener noreferrer">Consultar</a>
-              <button type="button" class="btn btn--primary product-card__add" data-cart-add data-product-name="Aceites y serums">
+              <a class="btn btn--outline" href="https://wa.me/573167302467?text=Hola%2C%20quiero%20consultar%20sobre%20productos%20de%20Aceites%20y%20serums" target="_blank" rel="noopener noreferrer" data-i18n="product.consult">Consultar</a>
+              <button type="button" class="btn btn--primary product-card__add" data-cart-add data-product-name="Aceites y serums" data-i18n="product.add" data-i18n-attr='{"data-product-name":"product.aceites.name"}'>
                 Agregar al pedido
               </button>
             </div>
           </article>
           <article class="card product-card reveal">
-            <span class="product-card__badge">Disponible en salón</span>
+            <span class="product-card__badge" data-i18n="product.badge">Disponible en salón</span>
             <span class="product-card__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s7-5.5 7-11.5A7 7 0 0 0 5 10.5C5 16.5 12 22 12 22Z"/></svg>
             </span>
-            <h3>Termoprotectores</h3>
-            <p>Protección antes del calor.</p>
+            <h3 data-i18n="product.termo.name">Termoprotectores</h3>
+            <p data-i18n="product.termo.desc">Protección antes del calor.</p>
             <div class="product-card__actions">
-              <a class="btn btn--outline" href="https://wa.me/573167302467?text=Hola%2C%20quiero%20consultar%20sobre%20productos%20de%20Termoprotectores" target="_blank" rel="noopener noreferrer">Consultar</a>
-              <button type="button" class="btn btn--primary product-card__add" data-cart-add data-product-name="Termoprotectores">
+              <a class="btn btn--outline" href="https://wa.me/573167302467?text=Hola%2C%20quiero%20consultar%20sobre%20productos%20de%20Termoprotectores" target="_blank" rel="noopener noreferrer" data-i18n="product.consult">Consultar</a>
+              <button type="button" class="btn btn--primary product-card__add" data-cart-add data-product-name="Termoprotectores" data-i18n="product.add" data-i18n-attr='{"data-product-name":"product.termo.name"}'>
                 Agregar al pedido
               </button>
             </div>
           </article>
           <article class="card product-card reveal">
-            <span class="product-card__badge">Disponible en salón</span>
+            <span class="product-card__badge" data-i18n="product.badge">Disponible en salón</span>
             <span class="product-card__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 3c4 0 7 3 7 9s3 9 7 9"/><path d="M5 21c4 0 7-3 7-9S15 3 19 3"/></svg>
             </span>
-            <h3>Tratamientos keratina</h3>
-            <p>Alisado y reestructuración capilar.</p>
+            <h3 data-i18n="product.keratina.name">Tratamientos keratina</h3>
+            <p data-i18n="product.keratina.desc">Alisado y reestructuración capilar.</p>
             <div class="product-card__actions">
-              <a class="btn btn--outline" href="https://wa.me/573167302467?text=Hola%2C%20quiero%20consultar%20sobre%20productos%20de%20Tratamientos%20keratina" target="_blank" rel="noopener noreferrer">Consultar</a>
-              <button type="button" class="btn btn--primary product-card__add" data-cart-add data-product-name="Tratamientos keratina">
+              <a class="btn btn--outline" href="https://wa.me/573167302467?text=Hola%2C%20quiero%20consultar%20sobre%20productos%20de%20Tratamientos%20keratina" target="_blank" rel="noopener noreferrer" data-i18n="product.consult">Consultar</a>
+              <button type="button" class="btn btn--primary product-card__add" data-cart-add data-product-name="Tratamientos keratina" data-i18n="product.add" data-i18n-attr='{"data-product-name":"product.keratina.name"}'>
                 Agregar al pedido
               </button>
             </div>
           </article>
           <article class="card product-card reveal">
-            <span class="product-card__badge">Disponible en salón</span>
+            <span class="product-card__badge" data-i18n="product.badge">Disponible en salón</span>
             <span class="product-card__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/><circle cx="12" cy="12" r="4"/></svg>
             </span>
-            <h3>Productos para color</h3>
-            <p>Mantén tu color vibrante por más tiempo.</p>
+            <h3 data-i18n="product.color.name">Productos para color</h3>
+            <p data-i18n="product.color.desc">Mantén tu color vibrante por más tiempo.</p>
             <div class="product-card__actions">
-              <a class="btn btn--outline" href="https://wa.me/573167302467?text=Hola%2C%20quiero%20consultar%20sobre%20productos%20de%20Productos%20para%20color" target="_blank" rel="noopener noreferrer">Consultar</a>
-              <button type="button" class="btn btn--primary product-card__add" data-cart-add data-product-name="Productos para color">
+              <a class="btn btn--outline" href="https://wa.me/573167302467?text=Hola%2C%20quiero%20consultar%20sobre%20productos%20de%20Productos%20para%20color" target="_blank" rel="noopener noreferrer" data-i18n="product.consult">Consultar</a>
+              <button type="button" class="btn btn--primary product-card__add" data-cart-add data-product-name="Productos para color" data-i18n="product.add" data-i18n-attr='{"data-product-name":"product.color.name"}'>
                 Agregar al pedido
               </button>
             </div>
           </article>
         </div>
         <div class="products__cta reveal">
-          <a href="productos.html" class="btn btn--primary btn--lg">Ver catálogo completo →</a>
+          <a href="productos.html" class="btn btn--primary btn--lg" data-i18n="products.viewCatalog">Ver catálogo completo →</a>
         </div>
       </div>
     </section>
@@ -381,24 +385,24 @@
     <!-- EQUIPO -->
     <section class="team" id="equipo">
       <div class="container">
-        <p class="section__eyebrow reveal">Nuestro equipo</p>
-        <h2 class="section__title reveal">Profesionales a tu servicio</h2>
+        <p class="section__eyebrow reveal" data-i18n="team.eyebrow">Nuestro equipo</p>
+        <h2 class="section__title reveal" data-i18n="team.title">Profesionales a tu servicio</h2>
         <div class="team__grid">
           <article class="team__card reveal">
             <div class="team__photo team__photo--gold" aria-hidden="true"></div>
             <h3>Luis Badel</h3>
-            <p>Fundador & estilista principal</p>
+            <p data-i18n="team.founder.role">Fundador & estilista principal</p>
             <a class="team__handle" href="https://www.instagram.com/luisbadelsaladebelleza/" target="_blank" rel="noopener noreferrer">@luisbadelsaladebelleza</a>
           </article>
           <article class="team__card reveal">
             <div class="team__photo team__photo--sage" aria-hidden="true"></div>
             <h3>Daniela Restrepo</h3>
-            <p>Especialista en color</p>
+            <p data-i18n="team.colorist.role">Especialista en color</p>
           </article>
           <article class="team__card reveal">
             <div class="team__photo team__photo--dark" aria-hidden="true"></div>
             <h3>Andrés Gómez</h3>
-            <p>Barbero & estilista</p>
+            <p data-i18n="team.barber.role">Barbero & estilista</p>
           </article>
         </div>
       </div>
@@ -407,53 +411,53 @@
     <!-- TESTIMONIOS -->
     <section class="testimonials" id="testimonios">
       <div class="container">
-        <p class="section__eyebrow reveal">Opiniones</p>
-        <h2 class="section__title reveal">Lo que dicen nuestros clientes</h2>
+        <p class="section__eyebrow reveal" data-i18n="testimonials.eyebrow">Opiniones</p>
+        <h2 class="section__title reveal" data-i18n="testimonials.title">Lo que dicen nuestros clientes</h2>
         <div class="testimonials__carousel reveal">
           <div class="testimonials__viewport" id="testimonialsViewport">
           <div class="testimonials__track" id="testimonialsTrack">
             <blockquote class="testimonial">
               <span class="testimonial__stars" aria-hidden="true">★★★★★</span>
-              <p>"El servicio es excelente, Luis es un gran profesional además te hace recomendaciones súper buenas. La atención es 10/10"</p>
+              <p data-i18n="testimonial.1.text">"El servicio es excelente, Luis es un gran profesional además te hace recomendaciones súper buenas. La atención es 10/10"</p>
               <cite>— Mary Duarte Herrera</cite>
               <span class="testimonial__source">Google Maps</span>
             </blockquote>
             <blockquote class="testimonial">
               <span class="testimonial__stars" aria-hidden="true">★★★★★</span>
-              <p>"Ubicación fantástica. Gente estupenda, excelente servicio y precios increíbles para todos los excelentes servicios que ofrece. Desde el estilista hasta las uñas y el café y té que te ofrecen a tu llegada, este lugar es genial. Muy recomendable."</p>
+              <p data-i18n="testimonial.2.text">"Ubicación fantástica. Gente estupenda, excelente servicio y precios increíbles para todos los excelentes servicios que ofrece. Desde el estilista hasta las uñas y el café y té que te ofrecen a tu llegada, este lugar es genial. Muy recomendable."</p>
               <cite>— Manny Turino</cite>
               <span class="testimonial__source">Google Maps</span>
             </blockquote>
             <blockquote class="testimonial">
               <span class="testimonial__stars" aria-hidden="true">★★★★★</span>
-              <p>"Es cómodo, con todos los protocolos, excelente atención y muy buen trabajo cabello y uñas. Recomendable."</p>
+              <p data-i18n="testimonial.3.text">"Es cómodo, con todos los protocolos, excelente atención y muy buen trabajo cabello y uñas. Recomendable."</p>
               <cite>— Ingrid Torres</cite>
               <span class="testimonial__source">Google Maps</span>
             </blockquote>
             <blockquote class="testimonial">
               <span class="testimonial__stars" aria-hidden="true">★★★★★</span>
-              <p>"¡Más que recomendado! Excelente servicio, productos de calidad que cuidan nuestro cabello. ¡Quedé feliz!"</p>
+              <p data-i18n="testimonial.4.text">"¡Más que recomendado! Excelente servicio, productos de calidad que cuidan nuestro cabello. ¡Quedé feliz!"</p>
               <cite>— Yuli Becerra Hoyos</cite>
               <span class="testimonial__source">Google Maps</span>
             </blockquote>
             <blockquote class="testimonial">
               <span class="testimonial__stars" aria-hidden="true">★★★★★</span>
-              <p>"Una de las mejores salas de belleza de Medellín."</p>
+              <p data-i18n="testimonial.5.text">"Una de las mejores salas de belleza de Medellín."</p>
               <cite>— José Fredy Cortes Zuleta</cite>
               <span class="testimonial__source">Google Maps</span>
             </blockquote>
             <blockquote class="testimonial">
               <span class="testimonial__stars" aria-hidden="true">★★★★★</span>
-              <p>"Un lugar tranquilo, fresco y la atención increíble."</p>
+              <p data-i18n="testimonial.6.text">"Un lugar tranquilo, fresco y la atención increíble."</p>
               <cite>— Elis Alejandro Acevedo Vides</cite>
               <span class="testimonial__source">Google Maps</span>
             </blockquote>
           </div>
           </div>
-          <button class="testimonials__arrow testimonials__arrow--prev" id="testimonialsPrev" aria-label="Opinión anterior">
+          <button class="testimonials__arrow testimonials__arrow--prev" id="testimonialsPrev" data-i18n-attr='{"aria-label":"testimonials.prevAria"}' aria-label="Opinión anterior">
             <svg viewBox="0 0 10 16" width="10" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 1 2 8l7 7"/></svg>
           </button>
-          <button class="testimonials__arrow testimonials__arrow--next" id="testimonialsNext" aria-label="Opinión siguiente">
+          <button class="testimonials__arrow testimonials__arrow--next" id="testimonialsNext" data-i18n-attr='{"aria-label":"testimonials.nextAria"}' aria-label="Opinión siguiente">
             <svg viewBox="0 0 10 16" width="10" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m1 1 7 7-7 7"/></svg>
           </button>
         </div>
@@ -463,9 +467,9 @@
     <!-- RESERVAR -->
     <section class="booking" id="reservar">
       <div class="container booking__content reveal">
-        <p class="section__eyebrow">Agenda tu cita</p>
-        <h2 class="section__title">Reservar</h2>
-        <p>Elige el servicio, la fecha y la hora que mejor te queden, o escríbenos directamente por WhatsApp.</p>
+        <p class="section__eyebrow" data-i18n="booking.eyebrow">Agenda tu cita</p>
+        <h2 class="section__title" data-i18n="booking.title">Reservar</h2>
+        <p data-i18n="booking.text">Elige el servicio, la fecha y la hora que mejor te queden, o escríbenos directamente por WhatsApp.</p>
         <div class="booking__actions">
           <button
             type="button"
@@ -473,10 +477,11 @@
             data-cal-namespace="reservar-cita"
             data-cal-link="cheese9117/reservar-cita"
             data-cal-config='{"layout":"month_view"}'
+            data-i18n="booking.bookOnline"
           >
             Reservar cita online
           </button>
-          <a class="btn btn--whatsapp btn--lg" href="https://wa.me/573167302467?text=Hola%2C%20quiero%20agendar%20una%20cita" target="_blank" rel="noopener noreferrer">
+          <a class="btn btn--whatsapp btn--lg" href="https://wa.me/573167302467?text=Hola%2C%20quiero%20agendar%20una%20cita" target="_blank" rel="noopener noreferrer" data-i18n="booking.whatsapp">
             Escribir por WhatsApp
           </a>
         </div>
@@ -497,19 +502,19 @@
             <meta itemprop="addressRegion" content="Antioquia">
             <meta itemprop="addressCountry" content="CO">
           </div>
-          <p class="section__eyebrow">Visítanos</p>
-          <h2 class="section__title">Ubicación y horarios</h2>
+          <p class="section__eyebrow" data-i18n="location.eyebrow">Visítanos</p>
+          <h2 class="section__title" data-i18n="location.title">Ubicación y horarios</h2>
           <address class="location__address" itemprop="address">Cra. 78 #54-75, Laureles - Estadio, Medellín</address>
           <ul class="location__hours">
-            <li><span>Lunes - Sábado</span><span>8:00 a.m. - 6:00 p.m.</span></li>
-            <li><span>Domingo</span><span>Cerrado</span></li>
+            <li><span data-i18n="location.weekdays">Lunes - Sábado</span><span>8:00 a.m. - 6:00 p.m.</span></li>
+            <li><span data-i18n="location.sunday">Domingo</span><span data-i18n="location.closed">Cerrado</span></li>
           </ul>
           <div class="location__social-links">
-            <a class="btn btn--outline" href="https://www.instagram.com/luisbadelsaladebelleza/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Luis Badel Sala de Belleza">
+            <a class="btn btn--outline" href="https://www.instagram.com/luisbadelsaladebelleza/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Luis Badel Sala de Belleza" data-i18n-attr='{"aria-label":"location.instagramAria"}'>
               <svg class="icon-svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
               Instagram
             </a>
-            <a class="btn btn--outline" href="https://web.facebook.com/people/Luis-badel-sala-de-belleza/100063726393266/" target="_blank" rel="noopener noreferrer" aria-label="Facebook de Luis Badel Sala de Belleza">
+            <a class="btn btn--outline" href="https://web.facebook.com/people/Luis-badel-sala-de-belleza/100063726393266/" target="_blank" rel="noopener noreferrer" aria-label="Facebook de Luis Badel Sala de Belleza" data-i18n-attr='{"aria-label":"location.facebookAria"}'>
               <svg class="icon-svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
               Facebook
             </a>
@@ -523,7 +528,7 @@
               width="100%" height="400" style="border:0;border-radius:var(--radius)" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
             </iframe>
           </div>
-          <a href="https://www.google.com/maps/place/Luis+Badel+Sala+De+Belleza/@6.2682309,-75.592807,17z/data=!4m15!1m8!3m7!1s0x8e442915c1791e37:0xf2c08f5bb0d4c839!2sLuis+Badel+Sala+De+Belleza!8m2!3d6.2683062!4d-75.5928817!10e5!16s%2Fg%2F11c5g_wrp4!3m5!1s0x8e442915c1791e37:0xf2c08f5bb0d4c839!8m2!3d6.2683062!4d-75.5928817!16s%2Fg%2F11c5g_wrp4" class="btn btn--outline" target="_blank" rel="noopener noreferrer">Ver en Google Maps</a>
+          <a href="https://www.google.com/maps/place/Luis+Badel+Sala+De+Belleza/@6.2682309,-75.592807,17z/data=!4m15!1m8!3m7!1s0x8e442915c1791e37:0xf2c08f5bb0d4c839!2sLuis+Badel+Sala+De+Belleza!8m2!3d6.2683062!4d-75.5928817!10e5!16s%2Fg%2F11c5g_wrp4!3m5!1s0x8e442915c1791e37:0xf2c08f5bb0d4c839!8m2!3d6.2683062!4d-75.5928817!16s%2Fg%2F11c5g_wrp4" class="btn btn--outline" target="_blank" rel="noopener noreferrer" data-i18n="location.viewMaps">Ver en Google Maps</a>
         </div>
       </div>
     </section>
@@ -541,7 +546,7 @@
             <span class="logo__sub">Sala de Belleza</span>
           </span>
         </a>
-        <p class="footer__tagline">Tu cabello merece lo mejor.</p>
+        <p class="footer__tagline" data-i18n="footer.tagline">Tu cabello merece lo mejor.</p>
         <a class="footer__phone" href="tel:+573167302467">+57 316 7302467</a>
       </div>
       <div class="footer__social">
@@ -555,13 +560,13 @@
           <svg viewBox="0 0 32 32" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M16.04 2.67C8.65 2.67 2.67 8.65 2.67 16.04c0 2.55.7 5.03 2.04 7.2L2.67 29.33l6.26-1.97a13.34 13.34 0 0 0 7.11 2.05c7.39 0 13.37-5.98 13.37-13.37S23.43 2.67 16.04 2.67Zm0 24.13c-2.31 0-4.55-.62-6.5-1.79l-.47-.28-3.85 1.21 1.24-3.74-.3-.49a10.78 10.78 0 0 1-1.65-5.67c0-5.96 4.85-10.81 10.81-10.81 2.89 0 5.6 1.13 7.64 3.17a10.74 10.74 0 0 1 3.17 7.64c0 5.96-4.85 10.81-10.81 10.81Zm5.93-8.1c-.32-.16-1.92-.95-2.22-1.06-.3-.11-.52-.16-.74.16-.22.32-.85 1.06-1.04 1.27-.19.22-.38.24-.7.08-.32-.16-1.36-.5-2.59-1.6-.96-.85-1.6-1.91-1.79-2.23-.19-.32-.02-.49.14-.65.14-.14.32-.38.48-.57.16-.19.21-.32.32-.54.11-.22.05-.41-.03-.57-.08-.16-.74-1.78-1.01-2.44-.27-.64-.54-.55-.74-.56h-.63c-.22 0-.57.08-.87.41-.3.32-1.14 1.12-1.14 2.73 0 1.61 1.17 3.17 1.33 3.39.16.22 2.3 3.51 5.57 4.92.78.34 1.39.54 1.86.69.78.25 1.49.21 2.05.13.63-.09 1.92-.78 2.19-1.54.27-.76.27-1.41.19-1.54-.08-.14-.3-.22-.62-.38Z"/></svg>
         </a>
       </div>
-      <p class="footer__copy">&copy; <span id="year"></span> Luis Badel Sala de Belleza. Todos los derechos reservados.</p>
-      <p class="footer__signature">Desarrollado por <a href="https://github.com/Cheese9117" target="_blank" rel="noopener noreferrer">Juan Sebastián Henao</a></p>
+      <p class="footer__copy">&copy; <span id="year"></span> <span data-i18n="footer.rights">Luis Badel Sala de Belleza. Todos los derechos reservados.</span></p>
+      <p class="footer__signature"><span data-i18n="footer.developedBy">Desarrollado por</span> <a href="https://github.com/Cheese9117" target="_blank" rel="noopener noreferrer">Juan Sebastián Henao</a></p>
     </div>
   </footer>
 
-  <a class="whatsapp-float" href="https://wa.me/573167302467?text=Hola%2C%20quiero%20agendar%20una%20cita%20en%20Luis%20Badel%20Sala%20de%20Belleza" target="_blank" rel="noopener noreferrer" aria-label="Escribir a Luis Badel Sala de Belleza por WhatsApp">
-    <span class="whatsapp-float__tooltip">¿Agendamos tu cita?</span>
+  <a class="whatsapp-float" href="https://wa.me/573167302467?text=Hola%2C%20quiero%20agendar%20una%20cita%20en%20Luis%20Badel%20Sala%20de%20Belleza" target="_blank" rel="noopener noreferrer" aria-label="Escribir a Luis Badel Sala de Belleza por WhatsApp" data-i18n-attr='{"aria-label":"whatsapp.aria"}'>
+    <span class="whatsapp-float__tooltip" data-i18n="whatsapp.tooltip">¿Agendamos tu cita?</span>
     <span class="whatsapp-float__icon" aria-hidden="true">
       <svg viewBox="0 0 32 32" width="28" height="28" fill="currentColor"><path d="M16.04 2.67C8.65 2.67 2.67 8.65 2.67 16.04c0 2.55.7 5.03 2.04 7.2L2.67 29.33l6.26-1.97a13.34 13.34 0 0 0 7.11 2.05c7.39 0 13.37-5.98 13.37-13.37S23.43 2.67 16.04 2.67Zm0 24.13c-2.31 0-4.55-.62-6.5-1.79l-.47-.28-3.85 1.21 1.24-3.74-.3-.49a10.78 10.78 0 0 1-1.65-5.67c0-5.96 4.85-10.81 10.81-10.81 2.89 0 5.6 1.13 7.64 3.17a10.74 10.74 0 0 1 3.17 7.64c0 5.96-4.85 10.81-10.81 10.81Zm5.93-8.1c-.32-.16-1.92-.95-2.22-1.06-.3-.11-.52-.16-.74.16-.22.32-.85 1.06-1.04 1.27-.19.22-.38.24-.7.08-.32-.16-1.36-.5-2.59-1.6-.96-.85-1.6-1.91-1.79-2.23-.19-.32-.02-.49.14-.65.14-.14.32-.38.48-.57.16-.19.21-.32.32-.54.11-.22.05-.41-.03-.57-.08-.16-.74-1.78-1.01-2.44-.27-.64-.54-.55-.74-.56h-.63c-.22 0-.57.08-.87.41-.3.32-1.14 1.12-1.14 2.73 0 1.61 1.17 3.17 1.33 3.39.16.22 2.3 3.51 5.57 4.92.78.34 1.39.54 1.86.69.78.25 1.49.21 2.05.13.63-.09 1.92-.78 2.19-1.54.27-.76.27-1.41.19-1.54-.08-.14-.3-.22-.62-.38Z"/></svg>
     </span>
@@ -572,22 +577,23 @@
     <div class="cart-drawer__backdrop" id="cartBackdrop"></div>
     <div class="cart-drawer__panel">
       <div class="cart-drawer__header">
-        <h2 id="cartTitle">Tu pedido</h2>
-        <button type="button" class="cart-drawer__close" id="cartClose" aria-label="Cerrar pedido">
+        <h2 id="cartTitle" data-i18n="cart.title">Tu pedido</h2>
+        <button type="button" class="cart-drawer__close" id="cartClose" aria-label="Cerrar pedido" data-i18n-attr='{"aria-label":"cart.closeAria"}'>
           <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
         </button>
       </div>
-      <p class="cart-drawer__empty" id="cartEmpty">Aún no has agregado productos a tu pedido.</p>
+      <p class="cart-drawer__empty" id="cartEmpty" data-i18n="cart.empty">Aún no has agregado productos a tu pedido.</p>
       <ul class="cart-drawer__list" id="cartList"></ul>
       <div class="cart-drawer__footer">
-        <button type="button" class="btn btn--outline" id="cartClear">Vaciar pedido</button>
-        <a class="btn btn--whatsapp" id="cartCheckout" href="https://wa.me/573167302467" target="_blank" rel="noopener noreferrer">
+        <button type="button" class="btn btn--outline" id="cartClear" data-i18n="cart.clear">Vaciar pedido</button>
+        <a class="btn btn--whatsapp" id="cartCheckout" href="https://wa.me/573167302467" target="_blank" rel="noopener noreferrer" data-i18n="cart.checkout">
           Enviar pedido por WhatsApp
         </a>
       </div>
     </div>
   </div>
 
+  <script src="js/i18n.js" defer></script>
   <script src="js/nav.js" defer></script>
   <script src="js/animations.js" defer></script>
   <script src="js/counters.js" defer></script>

@@ -39,7 +39,7 @@
     const lines = Object.entries(cart).map(
       ([name, quantity]) => `• ${name} x${quantity}`
     );
-    const intro = 'Hola, quiero hacer el siguiente pedido:';
+    const intro = window.luisbadelI18n.t('cart.whatsappIntro');
     return `${intro}\n\n${lines.join('\n')}`;
   }
 
@@ -65,7 +65,7 @@
       decreaseBtn.type = 'button';
       decreaseBtn.className = 'cart-drawer__qty-btn';
       decreaseBtn.textContent = '−';
-      decreaseBtn.setAttribute('aria-label', `Quitar una unidad de ${name}`);
+      decreaseBtn.setAttribute('aria-label', window.luisbadelI18n.format('cart.decreaseAria', { name }));
       decreaseBtn.addEventListener('click', () => updateQuantity(name, -1));
 
       const qty = document.createElement('span');
@@ -76,13 +76,13 @@
       increaseBtn.type = 'button';
       increaseBtn.className = 'cart-drawer__qty-btn';
       increaseBtn.textContent = '+';
-      increaseBtn.setAttribute('aria-label', `Agregar una unidad de ${name}`);
+      increaseBtn.setAttribute('aria-label', window.luisbadelI18n.format('cart.increaseAria', { name }));
       increaseBtn.addEventListener('click', () => updateQuantity(name, 1));
 
       const removeBtn = document.createElement('button');
       removeBtn.type = 'button';
       removeBtn.className = 'cart-drawer__remove';
-      removeBtn.setAttribute('aria-label', `Eliminar ${name} del pedido`);
+      removeBtn.setAttribute('aria-label', window.luisbadelI18n.format('cart.removeAria', { name }));
       removeBtn.innerHTML = '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>';
       removeBtn.addEventListener('click', () => removeItem(name));
 
@@ -164,6 +164,8 @@
       openDrawer();
     });
   });
+
+  document.addEventListener('luisbadel:langchange', render);
 
   render();
 })();

@@ -116,7 +116,7 @@
 <body>
 
   <div class="announcement">
-    <p>✨ Agenda tu cita por WhatsApp · +57 316 7302467 · Laureles, Medellín</p>
+    <p data-i18n="announcement.text">✨ Agenda tu cita por WhatsApp · +57 316 7302467 · Laureles, Medellín</p>
   </div>
 
   <header class="navbar" id="navbar">
@@ -131,33 +131,37 @@
       </a>
       <nav class="nav" id="nav">
         <ul class="nav__list">
-          <li><a href="index.html#servicios">Servicios</a></li>
-          <li><a href="index.html#galeria">Galería</a></li>
+          <li><a href="index.html#servicios" data-i18n="nav.services">Servicios</a></li>
+          <li><a href="index.html#galeria" data-i18n="nav.gallery">Galería</a></li>
           <li class="nav__item nav__item--dropdown">
             <a href="productos.html" aria-current="page" class="nav__link nav__link--parent is-active">
-              Productos
+              <span data-i18n="nav.products">Productos</span>
               <svg class="nav__chevron" viewBox="0 0 10 6" width="10" height="6" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg>
             </a>
             <ul class="nav__dropdown">
-              <li><a href="productos.html" class="nav__dropdown-link">Todos los productos</a></li>
-              <li><a href="productos.html#cuidado-capilar" class="nav__dropdown-link">Cuidado capilar</a></li>
-              <li><a href="productos.html#tratamientos" class="nav__dropdown-link">Tratamientos</a></li>
-              <li><a href="productos.html#styling" class="nav__dropdown-link">Styling y acabado</a></li>
+              <li><a href="productos.html" class="nav__dropdown-link" data-i18n="nav.products.all">Todos los productos</a></li>
+              <li><a href="productos.html#cuidado-capilar" class="nav__dropdown-link" data-i18n="nav.products.haircare">Cuidado capilar</a></li>
+              <li><a href="productos.html#tratamientos" class="nav__dropdown-link" data-i18n="nav.products.treatments">Tratamientos</a></li>
+              <li><a href="productos.html#styling" class="nav__dropdown-link" data-i18n="nav.products.styling">Styling y acabado</a></li>
             </ul>
           </li>
-          <li><a href="index.html#equipo">Equipo</a></li>
-          <li><a href="index.html#testimonios">Opiniones</a></li>
-          <li><a href="index.html#reservar">Reservar</a></li>
-          <li><a href="index.html#ubicacion">Ubicación</a></li>
+          <li><a href="index.html#equipo" data-i18n="nav.team">Equipo</a></li>
+          <li><a href="index.html#testimonios" data-i18n="nav.testimonials">Opiniones</a></li>
+          <li><a href="index.html#reservar" data-i18n="nav.booking">Reservar</a></li>
+          <li><a href="index.html#ubicacion" data-i18n="nav.location">Ubicación</a></li>
         </ul>
       </nav>
-      <button type="button" class="nav__cart" id="cartToggle" aria-haspopup="dialog" aria-expanded="false" aria-controls="cartDrawer" aria-label="Ver tu pedido">
+      <div class="lang-switch" role="group" aria-label="Idioma / Language">
+        <button type="button" class="lang-switch__btn" data-lang-option="es" aria-pressed="false">ES</button>
+        <button type="button" class="lang-switch__btn" data-lang-option="en" aria-pressed="false">EN</button>
+      </div>
+      <button type="button" class="nav__cart" id="cartToggle" aria-haspopup="dialog" aria-expanded="false" aria-controls="cartDrawer" aria-label="Ver tu pedido" data-i18n-attr='{"aria-label":"nav.cartAria"}'>
         <svg class="nav__cart-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
           <path d="M3 3h2l.4 2M7 13h10l3-7H5.4M7 13 5.4 5M7 13l-1.4 2.8A1 1 0 0 0 6.5 17H17M9 21a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm9 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z"/>
         </svg>
         <span class="nav__cart-badge" id="cartBadge" hidden>0</span>
       </button>
-      <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+      <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" data-i18n-attr='{"aria-label":"nav.menuAria"}'>
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -168,84 +172,84 @@
     <!-- HERO DE PÁGINA -->
     <section class="page-hero">
       <div class="container page-hero__content reveal">
-        <p class="hero__eyebrow">Disponible en salón</p>
-        <h1 class="section__title">Productos profesionales</h1>
-        <p class="hero__subtitle">Selección de productos de alta calidad disponibles en nuestro salón. Consúltanos en persona o escríbenos por WhatsApp.</p>
+        <p class="hero__eyebrow" data-i18n="product.badge">Disponible en salón</p>
+        <h1 class="section__title" data-i18n="productsPage.title">Productos profesionales</h1>
+        <p class="hero__subtitle" data-i18n="productsPage.subtitle">Selección de productos de alta calidad disponibles en nuestro salón. Consúltanos en persona o escríbenos por WhatsApp.</p>
       </div>
     </section>
 
     <!-- CUIDADO CAPILAR -->
     <section class="products" id="cuidado-capilar">
       <div class="container">
-        <p class="section__eyebrow reveal">Categoría</p>
-        <h2 class="section__title reveal">Cuidado capilar</h2>
+        <p class="section__eyebrow reveal" data-i18n="productsPage.category">Categoría</p>
+        <h2 class="section__title reveal" data-i18n="nav.products.haircare">Cuidado capilar</h2>
         <div class="products__grid">
           <article class="card product-card reveal">
-            <span class="product-card__badge">Disponible en salón</span>
+            <span class="product-card__badge" data-i18n="product.badge">Disponible en salón</span>
             <span class="product-card__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 2h6v3.5l1.5 2.5v12a1 1 0 0 1-1 1h-7a1 1 0 0 1-1-1V8L9 5.5V2Z"/><path d="M7.5 12h9"/></svg>
             </span>
-            <h3>Shampoo hidratante profesional</h3>
-            <p>Para cabello seco y dañado.</p>
+            <h3 data-i18n="pp.1.name">Shampoo hidratante profesional</h3>
+            <p data-i18n="pp.1.desc">Para cabello seco y dañado.</p>
             <div class="product-card__actions">
-              <a class="btn btn--outline" href="https://wa.me/573167302467?text=Hola%2C%20quiero%20consultar%20el%20precio%20del%20Shampoo%20hidratante%20profesional" target="_blank" rel="noopener noreferrer">Consultar precio</a>
-              <button type="button" class="btn btn--primary product-card__add" data-cart-add data-product-name="Shampoo hidratante profesional">
+              <a class="btn btn--outline" href="https://wa.me/573167302467?text=Hola%2C%20quiero%20consultar%20el%20precio%20del%20Shampoo%20hidratante%20profesional" target="_blank" rel="noopener noreferrer" data-i18n="product.consultPrice">Consultar precio</a>
+              <button type="button" class="btn btn--primary product-card__add" data-cart-add data-product-name="Shampoo hidratante profesional" data-i18n="product.add" data-i18n-attr='{"data-product-name":"pp.1.name"}'>
                 Agregar al pedido
               </button>
             </div>
           </article>
           <article class="card product-card reveal">
-            <span class="product-card__badge">Disponible en salón</span>
+            <span class="product-card__badge" data-i18n="product.badge">Disponible en salón</span>
             <span class="product-card__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 2h6v3.5l1.5 2.5v12a1 1 0 0 1-1 1h-7a1 1 0 0 1-1-1V8L9 5.5V2Z"/><path d="M7.5 12h9"/></svg>
             </span>
-            <h3>Shampoo anti-frizz</h3>
-            <p>Control de encrespamiento.</p>
+            <h3 data-i18n="pp.2.name">Shampoo anti-frizz</h3>
+            <p data-i18n="pp.2.desc">Control de encrespamiento.</p>
             <div class="product-card__actions">
-              <a class="btn btn--outline" href="https://wa.me/573167302467?text=Hola%2C%20quiero%20consultar%20el%20precio%20del%20Shampoo%20anti-frizz" target="_blank" rel="noopener noreferrer">Consultar precio</a>
-              <button type="button" class="btn btn--primary product-card__add" data-cart-add data-product-name="Shampoo anti-frizz">
+              <a class="btn btn--outline" href="https://wa.me/573167302467?text=Hola%2C%20quiero%20consultar%20el%20precio%20del%20Shampoo%20anti-frizz" target="_blank" rel="noopener noreferrer" data-i18n="product.consultPrice">Consultar precio</a>
+              <button type="button" class="btn btn--primary product-card__add" data-cart-add data-product-name="Shampoo anti-frizz" data-i18n="product.add" data-i18n-attr='{"data-product-name":"pp.2.name"}'>
                 Agregar al pedido
               </button>
             </div>
           </article>
           <article class="card product-card reveal">
-            <span class="product-card__badge">Disponible en salón</span>
+            <span class="product-card__badge" data-i18n="product.badge">Disponible en salón</span>
             <span class="product-card__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 2h6v3.5l1.5 2.5v12a1 1 0 0 1-1 1h-7a1 1 0 0 1-1-1V8L9 5.5V2Z"/><path d="M7.5 12h9"/></svg>
             </span>
-            <h3>Shampoo de color</h3>
-            <p>Protege y prolonga el color.</p>
+            <h3 data-i18n="pp.3.name">Shampoo de color</h3>
+            <p data-i18n="pp.3.desc">Protege y prolonga el color.</p>
             <div class="product-card__actions">
-              <a class="btn btn--outline" href="https://wa.me/573167302467?text=Hola%2C%20quiero%20consultar%20el%20precio%20del%20Shampoo%20de%20color" target="_blank" rel="noopener noreferrer">Consultar precio</a>
-              <button type="button" class="btn btn--primary product-card__add" data-cart-add data-product-name="Shampoo de color">
+              <a class="btn btn--outline" href="https://wa.me/573167302467?text=Hola%2C%20quiero%20consultar%20el%20precio%20del%20Shampoo%20de%20color" target="_blank" rel="noopener noreferrer" data-i18n="product.consultPrice">Consultar precio</a>
+              <button type="button" class="btn btn--primary product-card__add" data-cart-add data-product-name="Shampoo de color" data-i18n="product.add" data-i18n-attr='{"data-product-name":"pp.3.name"}'>
                 Agregar al pedido
               </button>
             </div>
           </article>
           <article class="card product-card reveal">
-            <span class="product-card__badge">Disponible en salón</span>
+            <span class="product-card__badge" data-i18n="product.badge">Disponible en salón</span>
             <span class="product-card__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
             </span>
-            <h3>Mascarilla de hidratación profunda</h3>
-            <p>Nutrición intensiva 1x semana.</p>
+            <h3 data-i18n="pp.4.name">Mascarilla de hidratación profunda</h3>
+            <p data-i18n="pp.4.desc">Nutrición intensiva 1x semana.</p>
             <div class="product-card__actions">
-              <a class="btn btn--outline" href="https://wa.me/573167302467?text=Hola%2C%20quiero%20consultar%20el%20precio%20de%20la%20Mascarilla%20de%20hidrataci%C3%B3n%20profunda" target="_blank" rel="noopener noreferrer">Consultar precio</a>
-              <button type="button" class="btn btn--primary product-card__add" data-cart-add data-product-name="Mascarilla de hidratación profunda">
+              <a class="btn btn--outline" href="https://wa.me/573167302467?text=Hola%2C%20quiero%20consultar%20el%20precio%20de%20la%20Mascarilla%20de%20hidrataci%C3%B3n%20profunda" target="_blank" rel="noopener noreferrer" data-i18n="product.consultPrice">Consultar precio</a>
+              <button type="button" class="btn btn--primary product-card__add" data-cart-add data-product-name="Mascarilla de hidratación profunda" data-i18n="product.add" data-i18n-attr='{"data-product-name":"pp.4.name"}'>
                 Agregar al pedido
               </button>
             </div>
           </article>
           <article class="card product-card reveal">
-            <span class="product-card__badge">Disponible en salón</span>
+            <span class="product-card__badge" data-i18n="product.badge">Disponible en salón</span>
             <span class="product-card__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
             </span>
-            <h3>Mascarilla de reparación</h3>
-            <p>Para cabello muy dañado.</p>
+            <h3 data-i18n="pp.5.name">Mascarilla de reparación</h3>
+            <p data-i18n="pp.5.desc">Para cabello muy dañado.</p>
             <div class="product-card__actions">
-              <a class="btn btn--outline" href="https://wa.me/573167302467?text=Hola%2C%20quiero%20consultar%20el%20precio%20de%20la%20Mascarilla%20de%20reparaci%C3%B3n" target="_blank" rel="noopener noreferrer">Consultar precio</a>
-              <button type="button" class="btn btn--primary product-card__add" data-cart-add data-product-name="Mascarilla de reparación">
+              <a class="btn btn--outline" href="https://wa.me/573167302467?text=Hola%2C%20quiero%20consultar%20el%20precio%20de%20la%20Mascarilla%20de%20reparaci%C3%B3n" target="_blank" rel="noopener noreferrer" data-i18n="product.consultPrice">Consultar precio</a>
+              <button type="button" class="btn btn--primary product-card__add" data-cart-add data-product-name="Mascarilla de reparación" data-i18n="product.add" data-i18n-attr='{"data-product-name":"pp.5.name"}'>
                 Agregar al pedido
               </button>
             </div>
@@ -257,47 +261,47 @@
     <!-- TRATAMIENTOS -->
     <section class="products" id="tratamientos">
       <div class="container">
-        <p class="section__eyebrow reveal">Categoría</p>
-        <h2 class="section__title reveal">Tratamientos</h2>
+        <p class="section__eyebrow reveal" data-i18n="productsPage.category">Categoría</p>
+        <h2 class="section__title reveal" data-i18n="nav.products.treatments">Tratamientos</h2>
         <div class="products__grid">
           <article class="card product-card reveal">
-            <span class="product-card__badge">Disponible en salón</span>
+            <span class="product-card__badge" data-i18n="product.badge">Disponible en salón</span>
             <span class="product-card__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 3c4 0 7 3 7 9s3 9 7 9"/><path d="M5 21c4 0 7-3 7-9S15 3 19 3"/></svg>
             </span>
-            <h3>Keratina brasileña</h3>
-            <p>Alisado progresivo hasta 4 meses.</p>
+            <h3 data-i18n="pp.6.name">Keratina brasileña</h3>
+            <p data-i18n="pp.6.desc">Alisado progresivo hasta 4 meses.</p>
             <div class="product-card__actions">
-              <a class="btn btn--outline" href="https://wa.me/573167302467?text=Hola%2C%20quiero%20consultar%20el%20precio%20de%20la%20Keratina%20brasile%C3%B1a" target="_blank" rel="noopener noreferrer">Consultar precio</a>
-              <button type="button" class="btn btn--primary product-card__add" data-cart-add data-product-name="Keratina brasileña">
+              <a class="btn btn--outline" href="https://wa.me/573167302467?text=Hola%2C%20quiero%20consultar%20el%20precio%20de%20la%20Keratina%20brasile%C3%B1a" target="_blank" rel="noopener noreferrer" data-i18n="product.consultPrice">Consultar precio</a>
+              <button type="button" class="btn btn--primary product-card__add" data-cart-add data-product-name="Keratina brasileña" data-i18n="product.add" data-i18n-attr='{"data-product-name":"pp.6.name"}'>
                 Agregar al pedido
               </button>
             </div>
           </article>
           <article class="card product-card reveal">
-            <span class="product-card__badge">Disponible en salón</span>
+            <span class="product-card__badge" data-i18n="product.badge">Disponible en salón</span>
             <span class="product-card__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 3c4 0 7 3 7 9s3 9 7 9"/><path d="M5 21c4 0 7-3 7-9S15 3 19 3"/></svg>
             </span>
-            <h3>Botox capilar</h3>
-            <p>Reestructuración sin formol.</p>
+            <h3 data-i18n="pp.7.name">Botox capilar</h3>
+            <p data-i18n="pp.7.desc">Reestructuración sin formol.</p>
             <div class="product-card__actions">
-              <a class="btn btn--outline" href="https://wa.me/573167302467?text=Hola%2C%20quiero%20consultar%20el%20precio%20del%20Botox%20capilar" target="_blank" rel="noopener noreferrer">Consultar precio</a>
-              <button type="button" class="btn btn--primary product-card__add" data-cart-add data-product-name="Botox capilar">
+              <a class="btn btn--outline" href="https://wa.me/573167302467?text=Hola%2C%20quiero%20consultar%20el%20precio%20del%20Botox%20capilar" target="_blank" rel="noopener noreferrer" data-i18n="product.consultPrice">Consultar precio</a>
+              <button type="button" class="btn btn--primary product-card__add" data-cart-add data-product-name="Botox capilar" data-i18n="product.add" data-i18n-attr='{"data-product-name":"pp.7.name"}'>
                 Agregar al pedido
               </button>
             </div>
           </article>
           <article class="card product-card reveal">
-            <span class="product-card__badge">Disponible en salón</span>
+            <span class="product-card__badge" data-i18n="product.badge">Disponible en salón</span>
             <span class="product-card__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2 9.5 7 4 8l4 4-1 6 5-3 5 3-1-6 4-4-5.5-1Z"/></svg>
             </span>
-            <h3>Ampollas de proteína</h3>
-            <p>Tratamiento de choque.</p>
+            <h3 data-i18n="pp.8.name">Ampollas de proteína</h3>
+            <p data-i18n="pp.8.desc">Tratamiento de choque.</p>
             <div class="product-card__actions">
-              <a class="btn btn--outline" href="https://wa.me/573167302467?text=Hola%2C%20quiero%20consultar%20el%20precio%20de%20las%20Ampollas%20de%20prote%C3%ADna" target="_blank" rel="noopener noreferrer">Consultar precio</a>
-              <button type="button" class="btn btn--primary product-card__add" data-cart-add data-product-name="Ampollas de proteína">
+              <a class="btn btn--outline" href="https://wa.me/573167302467?text=Hola%2C%20quiero%20consultar%20el%20precio%20de%20las%20Ampollas%20de%20prote%C3%ADna" target="_blank" rel="noopener noreferrer" data-i18n="product.consultPrice">Consultar precio</a>
+              <button type="button" class="btn btn--primary product-card__add" data-cart-add data-product-name="Ampollas de proteína" data-i18n="product.add" data-i18n-attr='{"data-product-name":"pp.8.name"}'>
                 Agregar al pedido
               </button>
             </div>
@@ -309,61 +313,61 @@
     <!-- STYLING Y ACABADO -->
     <section class="products" id="styling">
       <div class="container">
-        <p class="section__eyebrow reveal">Categoría</p>
-        <h2 class="section__title reveal">Styling y acabado</h2>
+        <p class="section__eyebrow reveal" data-i18n="productsPage.category">Categoría</p>
+        <h2 class="section__title reveal" data-i18n="nav.products.styling">Styling y acabado</h2>
         <div class="products__grid">
           <article class="card product-card reveal">
-            <span class="product-card__badge">Disponible en salón</span>
+            <span class="product-card__badge" data-i18n="product.badge">Disponible en salón</span>
             <span class="product-card__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2 9.5 7 4 8l4 4-1 6 5-3 5 3-1-6 4-4-5.5-1Z"/></svg>
             </span>
-            <h3>Aceite de argán</h3>
-            <p>Brillo y suavidad sin residuo.</p>
+            <h3 data-i18n="pp.9.name">Aceite de argán</h3>
+            <p data-i18n="pp.9.desc">Brillo y suavidad sin residuo.</p>
             <div class="product-card__actions">
-              <a class="btn btn--outline" href="https://wa.me/573167302467?text=Hola%2C%20quiero%20consultar%20el%20precio%20del%20Aceite%20de%20arg%C3%A1n" target="_blank" rel="noopener noreferrer">Consultar precio</a>
-              <button type="button" class="btn btn--primary product-card__add" data-cart-add data-product-name="Aceite de argán">
+              <a class="btn btn--outline" href="https://wa.me/573167302467?text=Hola%2C%20quiero%20consultar%20el%20precio%20del%20Aceite%20de%20arg%C3%A1n" target="_blank" rel="noopener noreferrer" data-i18n="product.consultPrice">Consultar precio</a>
+              <button type="button" class="btn btn--primary product-card__add" data-cart-add data-product-name="Aceite de argán" data-i18n="product.add" data-i18n-attr='{"data-product-name":"pp.9.name"}'>
                 Agregar al pedido
               </button>
             </div>
           </article>
           <article class="card product-card reveal">
-            <span class="product-card__badge">Disponible en salón</span>
+            <span class="product-card__badge" data-i18n="product.badge">Disponible en salón</span>
             <span class="product-card__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2 9.5 7 4 8l4 4-1 6 5-3 5 3-1-6 4-4-5.5-1Z"/></svg>
             </span>
-            <h3>Serum anti-frizz</h3>
-            <p>Control de frizz en clima húmedo.</p>
+            <h3 data-i18n="pp.10.name">Serum anti-frizz</h3>
+            <p data-i18n="pp.10.desc">Control de frizz en clima húmedo.</p>
             <div class="product-card__actions">
-              <a class="btn btn--outline" href="https://wa.me/573167302467?text=Hola%2C%20quiero%20consultar%20el%20precio%20del%20Serum%20anti-frizz" target="_blank" rel="noopener noreferrer">Consultar precio</a>
-              <button type="button" class="btn btn--primary product-card__add" data-cart-add data-product-name="Serum anti-frizz">
+              <a class="btn btn--outline" href="https://wa.me/573167302467?text=Hola%2C%20quiero%20consultar%20el%20precio%20del%20Serum%20anti-frizz" target="_blank" rel="noopener noreferrer" data-i18n="product.consultPrice">Consultar precio</a>
+              <button type="button" class="btn btn--primary product-card__add" data-cart-add data-product-name="Serum anti-frizz" data-i18n="product.add" data-i18n-attr='{"data-product-name":"pp.10.name"}'>
                 Agregar al pedido
               </button>
             </div>
           </article>
           <article class="card product-card reveal">
-            <span class="product-card__badge">Disponible en salón</span>
+            <span class="product-card__badge" data-i18n="product.badge">Disponible en salón</span>
             <span class="product-card__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s7-5.5 7-11.5A7 7 0 0 0 5 10.5C5 16.5 12 22 12 22Z"/></svg>
             </span>
-            <h3>Termoprotector en spray</h3>
-            <p>Protección hasta 230°C.</p>
+            <h3 data-i18n="pp.11.name">Termoprotector en spray</h3>
+            <p data-i18n="pp.11.desc">Protección hasta 230°C.</p>
             <div class="product-card__actions">
-              <a class="btn btn--outline" href="https://wa.me/573167302467?text=Hola%2C%20quiero%20consultar%20el%20precio%20del%20Termoprotector%20en%20spray" target="_blank" rel="noopener noreferrer">Consultar precio</a>
-              <button type="button" class="btn btn--primary product-card__add" data-cart-add data-product-name="Termoprotector en spray">
+              <a class="btn btn--outline" href="https://wa.me/573167302467?text=Hola%2C%20quiero%20consultar%20el%20precio%20del%20Termoprotector%20en%20spray" target="_blank" rel="noopener noreferrer" data-i18n="product.consultPrice">Consultar precio</a>
+              <button type="button" class="btn btn--primary product-card__add" data-cart-add data-product-name="Termoprotector en spray" data-i18n="product.add" data-i18n-attr='{"data-product-name":"pp.11.name"}'>
                 Agregar al pedido
               </button>
             </div>
           </article>
           <article class="card product-card reveal">
-            <span class="product-card__badge">Disponible en salón</span>
+            <span class="product-card__badge" data-i18n="product.badge">Disponible en salón</span>
             <span class="product-card__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/><circle cx="12" cy="12" r="4"/></svg>
             </span>
-            <h3>Laca de fijación fuerte</h3>
-            <p>Para peinados duraderos.</p>
+            <h3 data-i18n="pp.12.name">Laca de fijación fuerte</h3>
+            <p data-i18n="pp.12.desc">Para peinados duraderos.</p>
             <div class="product-card__actions">
-              <a class="btn btn--outline" href="https://wa.me/573167302467?text=Hola%2C%20quiero%20consultar%20el%20precio%20de%20la%20Laca%20de%20fijaci%C3%B3n%20fuerte" target="_blank" rel="noopener noreferrer">Consultar precio</a>
-              <button type="button" class="btn btn--primary product-card__add" data-cart-add data-product-name="Laca de fijación fuerte">
+              <a class="btn btn--outline" href="https://wa.me/573167302467?text=Hola%2C%20quiero%20consultar%20el%20precio%20de%20la%20Laca%20de%20fijaci%C3%B3n%20fuerte" target="_blank" rel="noopener noreferrer" data-i18n="product.consultPrice">Consultar precio</a>
+              <button type="button" class="btn btn--primary product-card__add" data-cart-add data-product-name="Laca de fijación fuerte" data-i18n="product.add" data-i18n-attr='{"data-product-name":"pp.12.name"}'>
                 Agregar al pedido
               </button>
             </div>
@@ -376,11 +380,11 @@
     <section class="booking">
       <div class="container">
         <div class="booking__info reveal" style="text-align:center; max-width:640px; margin:0 auto;">
-          <h2 class="section__title">¿Buscas algo específico?</h2>
-          <p>Escríbenos y te asesoramos sobre el producto ideal para tu tipo de cabello.</p>
+          <h2 class="section__title" data-i18n="productsPage.ctaTitle">¿Buscas algo específico?</h2>
+          <p data-i18n="productsPage.ctaText">Escríbenos y te asesoramos sobre el producto ideal para tu tipo de cabello.</p>
           <a class="btn btn--whatsapp btn--lg" href="https://wa.me/573167302467?text=Hola%2C%20quiero%20asesor%C3%ADa%20sobre%20productos%20capilares" target="_blank" rel="noopener noreferrer">
             <svg class="icon-svg" viewBox="0 0 32 32" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M16.04 2.67C8.65 2.67 2.67 8.65 2.67 16.04c0 2.55.7 5.03 2.04 7.2L2.67 29.33l6.26-1.97a13.34 13.34 0 0 0 7.11 2.05c7.39 0 13.37-5.98 13.37-13.37S23.43 2.67 16.04 2.67Zm0 24.13c-2.31 0-4.55-.62-6.5-1.79l-.47-.28-3.85 1.21 1.24-3.74-.3-.49a10.78 10.78 0 0 1-1.65-5.67c0-5.96 4.85-10.81 10.81-10.81 2.89 0 5.6 1.13 7.64 3.17a10.74 10.74 0 0 1 3.17 7.64c0 5.96-4.85 10.81-10.81 10.81Zm5.93-8.1c-.32-.16-1.92-.95-2.22-1.06-.3-.11-.52-.16-.74.16-.22.32-.85 1.06-1.04 1.27-.19.22-.38.24-.7.08-.32-.16-1.36-.5-2.59-1.6-.96-.85-1.6-1.91-1.79-2.23-.19-.32-.02-.49.14-.65.14-.14.32-.38.48-.57.16-.19.21-.32.32-.54.11-.22.05-.41-.03-.57-.08-.16-.74-1.78-1.01-2.44-.27-.64-.54-.55-.74-.56h-.63c-.22 0-.57.08-.87.41-.3.32-1.14 1.12-1.14 2.73 0 1.61 1.17 3.17 1.33 3.39.16.22 2.3 3.51 5.57 4.92.78.34 1.39.54 1.86.69.78.25 1.49.21 2.05.13.63-.09 1.92-.78 2.19-1.54.27-.76.27-1.41.19-1.54-.08-.14-.3-.22-.62-.38Z"/></svg>
-            Escribir por WhatsApp
+            <span data-i18n="booking.whatsapp">Escribir por WhatsApp</span>
           </a>
         </div>
       </div>
@@ -399,7 +403,7 @@
             <span class="logo__sub">Sala de Belleza</span>
           </span>
         </a>
-        <p class="footer__tagline">Tu cabello merece lo mejor.</p>
+        <p class="footer__tagline" data-i18n="footer.tagline">Tu cabello merece lo mejor.</p>
         <a class="footer__phone" href="tel:+573167302467">+57 316 7302467</a>
       </div>
       <div class="footer__social">
@@ -413,13 +417,13 @@
           <svg viewBox="0 0 32 32" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M16.04 2.67C8.65 2.67 2.67 8.65 2.67 16.04c0 2.55.7 5.03 2.04 7.2L2.67 29.33l6.26-1.97a13.34 13.34 0 0 0 7.11 2.05c7.39 0 13.37-5.98 13.37-13.37S23.43 2.67 16.04 2.67Zm0 24.13c-2.31 0-4.55-.62-6.5-1.79l-.47-.28-3.85 1.21 1.24-3.74-.3-.49a10.78 10.78 0 0 1-1.65-5.67c0-5.96 4.85-10.81 10.81-10.81 2.89 0 5.6 1.13 7.64 3.17a10.74 10.74 0 0 1 3.17 7.64c0 5.96-4.85 10.81-10.81 10.81Zm5.93-8.1c-.32-.16-1.92-.95-2.22-1.06-.3-.11-.52-.16-.74.16-.22.32-.85 1.06-1.04 1.27-.19.22-.38.24-.7.08-.32-.16-1.36-.5-2.59-1.6-.96-.85-1.6-1.91-1.79-2.23-.19-.32-.02-.49.14-.65.14-.14.32-.38.48-.57.16-.19.21-.32.32-.54.11-.22.05-.41-.03-.57-.08-.16-.74-1.78-1.01-2.44-.27-.64-.54-.55-.74-.56h-.63c-.22 0-.57.08-.87.41-.3.32-1.14 1.12-1.14 2.73 0 1.61 1.17 3.17 1.33 3.39.16.22 2.3 3.51 5.57 4.92.78.34 1.39.54 1.86.69.78.25 1.49.21 2.05.13.63-.09 1.92-.78 2.19-1.54.27-.76.27-1.41.19-1.54-.08-.14-.3-.22-.62-.38Z"/></svg>
         </a>
       </div>
-      <p class="footer__copy">&copy; <span id="year"></span> Luis Badel Sala de Belleza. Todos los derechos reservados.</p>
-      <p class="footer__signature">Desarrollado por <a href="https://github.com/Cheese9117" target="_blank" rel="noopener noreferrer">Juan Sebastián Henao</a></p>
+      <p class="footer__copy">&copy; <span id="year"></span> <span data-i18n="footer.rights">Luis Badel Sala de Belleza. Todos los derechos reservados.</span></p>
+      <p class="footer__signature"><span data-i18n="footer.developedBy">Desarrollado por</span> <a href="https://github.com/Cheese9117" target="_blank" rel="noopener noreferrer">Juan Sebastián Henao</a></p>
     </div>
   </footer>
 
-  <a class="whatsapp-float" href="https://wa.me/573167302467?text=Hola%2C%20quiero%20agendar%20una%20cita%20en%20Luis%20Badel%20Sala%20de%20Belleza" target="_blank" rel="noopener noreferrer" aria-label="Escribir a Luis Badel Sala de Belleza por WhatsApp">
-    <span class="whatsapp-float__tooltip">¿Agendamos tu cita?</span>
+  <a class="whatsapp-float" href="https://wa.me/573167302467?text=Hola%2C%20quiero%20agendar%20una%20cita%20en%20Luis%20Badel%20Sala%20de%20Belleza" target="_blank" rel="noopener noreferrer" aria-label="Escribir a Luis Badel Sala de Belleza por WhatsApp" data-i18n-attr='{"aria-label":"whatsapp.aria"}'>
+    <span class="whatsapp-float__tooltip" data-i18n="whatsapp.tooltip">¿Agendamos tu cita?</span>
     <span class="whatsapp-float__icon" aria-hidden="true">
       <svg viewBox="0 0 32 32" width="28" height="28" fill="currentColor"><path d="M16.04 2.67C8.65 2.67 2.67 8.65 2.67 16.04c0 2.55.7 5.03 2.04 7.2L2.67 29.33l6.26-1.97a13.34 13.34 0 0 0 7.11 2.05c7.39 0 13.37-5.98 13.37-13.37S23.43 2.67 16.04 2.67Zm0 24.13c-2.31 0-4.55-.62-6.5-1.79l-.47-.28-3.85 1.21 1.24-3.74-.3-.49a10.78 10.78 0 0 1-1.65-5.67c0-5.96 4.85-10.81 10.81-10.81 2.89 0 5.6 1.13 7.64 3.17a10.74 10.74 0 0 1 3.17 7.64c0 5.96-4.85 10.81-10.81 10.81Zm5.93-8.1c-.32-.16-1.92-.95-2.22-1.06-.3-.11-.52-.16-.74.16-.22.32-.85 1.06-1.04 1.27-.19.22-.38.24-.7.08-.32-.16-1.36-.5-2.59-1.6-.96-.85-1.6-1.91-1.79-2.23-.19-.32-.02-.49.14-.65.14-.14.32-.38.48-.57.16-.19.21-.32.32-.54.11-.22.05-.41-.03-.57-.08-.16-.74-1.78-1.01-2.44-.27-.64-.54-.55-.74-.56h-.63c-.22 0-.57.08-.87.41-.3.32-1.14 1.12-1.14 2.73 0 1.61 1.17 3.17 1.33 3.39.16.22 2.3 3.51 5.57 4.92.78.34 1.39.54 1.86.69.78.25 1.49.21 2.05.13.63-.09 1.92-.78 2.19-1.54.27-.76.27-1.41.19-1.54-.08-.14-.3-.22-.62-.38Z"/></svg>
     </span>
@@ -430,22 +434,23 @@
     <div class="cart-drawer__backdrop" id="cartBackdrop"></div>
     <div class="cart-drawer__panel">
       <div class="cart-drawer__header">
-        <h2 id="cartTitle">Tu pedido</h2>
-        <button type="button" class="cart-drawer__close" id="cartClose" aria-label="Cerrar pedido">
+        <h2 id="cartTitle" data-i18n="cart.title">Tu pedido</h2>
+        <button type="button" class="cart-drawer__close" id="cartClose" aria-label="Cerrar pedido" data-i18n-attr='{"aria-label":"cart.closeAria"}'>
           <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
         </button>
       </div>
-      <p class="cart-drawer__empty" id="cartEmpty">Aún no has agregado productos a tu pedido.</p>
+      <p class="cart-drawer__empty" id="cartEmpty" data-i18n="cart.empty">Aún no has agregado productos a tu pedido.</p>
       <ul class="cart-drawer__list" id="cartList"></ul>
       <div class="cart-drawer__footer">
-        <button type="button" class="btn btn--outline" id="cartClear">Vaciar pedido</button>
-        <a class="btn btn--whatsapp" id="cartCheckout" href="https://wa.me/573167302467" target="_blank" rel="noopener noreferrer">
+        <button type="button" class="btn btn--outline" id="cartClear" data-i18n="cart.clear">Vaciar pedido</button>
+        <a class="btn btn--whatsapp" id="cartCheckout" href="https://wa.me/573167302467" target="_blank" rel="noopener noreferrer" data-i18n="cart.checkout">
           Enviar pedido por WhatsApp
         </a>
       </div>
     </div>
   </div>
 
+  <script src="js/i18n.js" defer></script>
   <script src="js/nav.js" defer></script>
   <script src="js/animations.js" defer></script>
   <script src="js/cart.js" defer></script>
