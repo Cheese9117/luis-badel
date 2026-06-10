@@ -263,3 +263,45 @@
     font-size: clamp(1.8rem, 7vw, 2.5rem);
   }
 }
+
+@media (max-width: 900px) {
+  .navbar__inner {
+    overflow: visible;
+  }
+
+  .container {
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+
+  .announcement {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .announcement p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0 1rem;
+  }
+
+  section,
+  .hero,
+  .footer {
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+}
+
+@media (max-width: 560px) {
+  .trust__grid {
+    width: 100%;
+  }
+
+  .hero__bg {
+    width: 100%;
+    left: 0;
+    right: 0;
+  }
+}
