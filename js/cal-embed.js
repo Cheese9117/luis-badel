@@ -32,7 +32,7 @@ Cal('init', 'cita', { origin: 'https://cal.com' });
 Cal.ns.cita('inline', {
   elementOrSelector: '#cal-booking',
   config: { layout: 'month_view', theme: 'light' },
-  calLink: 'luis-badel/cita',
+  calLink: 'cheese9117/reservar-cita',
 });
 
 Cal.ns.cita('ui', {
