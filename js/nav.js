@@ -3,6 +3,11 @@
   const nav = document.getElementById('nav');
   const navbar = document.getElementById('navbar');
 
+  // Oculta el logo si la imagen no carga
+  document.querySelectorAll('.logo__img').forEach((img) => {
+    img.addEventListener('error', () => img.remove());
+  });
+
   // Navbar scroll effect
   if (navbar) {
     const onScroll = () => {

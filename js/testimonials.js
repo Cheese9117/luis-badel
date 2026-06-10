@@ -11,11 +11,12 @@
   slides.forEach((_, index) => {
     const dot = document.createElement('button');
     dot.setAttribute('aria-label', `Ir a la opinión ${index + 1}`);
-    dot.addEventListener('click', () => scrollToSlide(index));
     dotsWrap.appendChild(dot);
   });
 
   const dots = Array.from(dotsWrap.children);
+  const AUTOPLAY_DELAY = 6000;
+  let autoplayTimer = null;
 
   function getStep() {
     const slide = slides[0];
@@ -24,26 +25,64 @@
     return slide.getBoundingClientRect().width + gap;
   }
 
+  function getCurrentIndex() {
+    return Math.round(track.scrollLeft / getStep());
+  }
+
   function scrollToSlide(index) {
-    track.scrollTo({ left: getStep() * index, behavior: 'smooth' });
+    const lastIndex = slides.length - 1;
+    const target = index > lastIndex ? 0 : index < 0 ? lastIndex : index;
+    track.scrollTo({ left: getStep() * target, behavior: 'smooth' });
   }
 
   function updateDots() {
-    const index = Math.round(track.scrollLeft / getStep());
+    const index = getCurrentIndex();
     dots.forEach((dot, i) => dot.classList.toggle('is-active', i === index));
   }
 
+  function startAutoplay() {
+    stopAutoplay();
+    autoplayTimer = window.setInterval(() => {
+      scrollToSlide(getCurrentIndex() + 1);
+    }, AUTOPLAY_DELAY);
+  }
+
+  function stopAutoplay() {
+    if (autoplayTimer) {
+      window.clearInterval(autoplayTimer);
+      autoplayTimer = null;
+    }
+  }
+
   prevBtn.addEventListener('click', () => {
-    track.scrollBy({ left: -getStep(), behavior: 'smooth' });
+    stopAutoplay();
+    scrollToSlide(getCurrentIndex() - 1);
+    startAutoplay();
   });
 
   nextBtn.addEventListener('click', () => {
-    track.scrollBy({ left: getStep(), behavior: 'smooth' });
+    stopAutoplay();
+    scrollToSlide(getCurrentIndex() + 1);
+    startAutoplay();
+  });
+
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+      stopAutoplay();
+      scrollToSlide(index);
+      startAutoplay();
+    });
   });
 
   track.addEventListener('scroll', () => {
     window.requestAnimationFrame(updateDots);
   }, { passive: true });
 
+  track.addEventListener('mouseenter', stopAutoplay);
+  track.addEventListener('mouseleave', startAutoplay);
+  track.addEventListener('touchstart', stopAutoplay, { passive: true });
+  track.addEventListener('touchend', startAutoplay, { passive: true });
+
   updateDots();
+  startAutoplay();
 })();
