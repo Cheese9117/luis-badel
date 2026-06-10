@@ -1,6 +1,15 @@
 (function () {
   const toggle = document.getElementById('navToggle');
   const nav = document.getElementById('nav');
+  const navbar = document.getElementById('navbar');
+
+  if (navbar) {
+    const onScroll = () => {
+      navbar.classList.toggle('is-scrolled', window.scrollY > 8);
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
 
   if (!toggle || !nav) return;
 
