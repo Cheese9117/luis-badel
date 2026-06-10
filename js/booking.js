@@ -1,37 +1,50 @@
 (function () {
   const form = document.getElementById('bookingForm');
-  const dateInput = document.getElementById('date');
   const WHATSAPP_NUMBER = '573167302467';
 
   if (!form) return;
 
-  if (dateInput) {
-    dateInput.addEventListener('input', () => {
-      const digits = dateInput.value.replace(/\D/g, '').slice(0, 8);
-      let formatted = digits;
-      if (digits.length > 4) {
-        formatted = `${digits.slice(0, 2)}/${digits.slice(2, 4)}/${digits.slice(4)}`;
-      } else if (digits.length > 2) {
-        formatted = `${digits.slice(0, 2)}/${digits.slice(2)}`;
-      }
-      dateInput.value = formatted;
-    });
+  function formatDate(isoDate) {
+    if (!isoDate) return '';
+    const [y, m, d] = isoDate.split('-');
+    return `${d}/${m}/${y}`;
   }
 
-  form.addEventListener('submit', (event) => {
+  function formatTime(t) {
+    if (!t) return '';
+    const [h, min] = t.split(':');
+    const hour = parseInt(h, 10);
+    const ampm = hour >= 12 ? 'p.m.' : 'a.m.';
+    const h12 = hour % 12 || 12;
+    return `${h12}:${min} ${ampm}`;
+  }
+
+  form.addEventListener('submit', function (event) {
     event.preventDefault();
 
-    const name = form.name.value.trim();
+    const name    = (form.name.value || '').trim();
+    const phone   = (form.phone ? form.phone.value : '').trim();
     const service = form.service.value;
-    const date = form.date.value;
-    const time = form.time.value;
+    const date    = formatDate(form.date.value);
+    const time    = formatTime(form.time.value);
 
-    const message =
-      `Hola, quiero reservar una cita.\n` +
-      `Nombre: ${name}\n` +
-      `Servicio: ${service}\n` +
-      `Fecha: ${date} (DD/MM/AAAA)\n` +
-      `Hora: ${time}`;
+    if (!name || !service || !form.date.value || !form.time.value) {
+      const firstEmpty = [
+        !name    && form.querySelector('#name'),
+        !service && form.querySelector('#service'),
+        !form.date.value && form.querySelector('#date'),
+        !form.time.value && form.querySelector('#time'),
+      ].find(Boolean);
+      if (firstEmpty) firstEmpty.focus();
+      return;
+    }
+
+    let message = `Hola, quiero reservar una cita en Luis Badel Sala de Belleza.\n\n`;
+    message += `👤 Nombre: ${name}\n`;
+    if (phone) message += `📱 Teléfono: ${phone}\n`;
+    message += `✂️ Servicio: ${service}\n`;
+    message += `📅 Fecha: ${date}\n`;
+    message += `🕐 Hora: ${time}`;
 
     const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank', 'noopener,noreferrer');

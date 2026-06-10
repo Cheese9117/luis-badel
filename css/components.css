@@ -635,6 +635,13 @@
   font-size: 0.95rem;
 }
 
+.location__social-links {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: var(--space-sm);
+}
+
 .location__map {
   height: 360px;
   border-radius: var(--radius);
