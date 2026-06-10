@@ -3,6 +3,7 @@
   const nav = document.getElementById('nav');
   const navbar = document.getElementById('navbar');
 
+  // Navbar scroll effect
   if (navbar) {
     const onScroll = () => {
       navbar.classList.toggle('is-scrolled', window.scrollY > 8);
@@ -11,29 +12,50 @@
     onScroll();
   }
 
-  if (!toggle || !nav) return;
-
-  toggle.addEventListener('click', () => {
-    const isOpen = nav.classList.toggle('is-open');
-    toggle.setAttribute('aria-expanded', String(isOpen));
-  });
-
-  nav.querySelectorAll('a').forEach((link) => {
-    link.addEventListener('click', () => {
-      nav.classList.remove('is-open');
-      toggle.setAttribute('aria-expanded', 'false');
+  // Mobile menu toggle
+  if (toggle && nav) {
+    toggle.addEventListener('click', () => {
+      const isOpen = nav.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', String(isOpen));
     });
-  });
 
-  // Dropdown toggle en móvil
-  document.querySelectorAll('.nav__item--dropdown').forEach(function(item) {
-    var parent = item.querySelector('.nav__link--parent');
-    if (!parent) return;
-    parent.addEventListener('click', function(e) {
-      if (window.innerWidth <= 900) {
-        e.preventDefault();
-        item.classList.toggle('is-open');
-      }
+    nav.querySelectorAll('a:not(.nav__link--parent)').forEach((link) => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
     });
+  }
+
+  // Dropdown — desktop: hover con delay para no cerrarse en el gap
+  // Mobile: click toggle
+  document.querySelectorAll('.nav__item--dropdown').forEach(function (item) {
+    var closeTimer = null;
+
+    function openDropdown() {
+      clearTimeout(closeTimer);
+      item.classList.add('is-open');
+    }
+
+    function closeDropdown() {
+      closeTimer = setTimeout(function () {
+        item.classList.remove('is-open');
+      }, 150); // 150ms de gracia — tiempo suficiente para mover el cursor al menú
+    }
+
+    // Desktop hover
+    item.addEventListener('mouseenter', openDropdown);
+    item.addEventListener('mouseleave', closeDropdown);
+
+    // Mobile click
+    var parentLink = item.querySelector('.nav__link--parent');
+    if (parentLink) {
+      parentLink.addEventListener('click', function (e) {
+        if (window.innerWidth <= 900) {
+          e.preventDefault();
+          item.classList.toggle('is-open');
+        }
+      });
+    }
   });
 })();

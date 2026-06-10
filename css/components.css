@@ -898,24 +898,11 @@
   position: relative;
 }
 
-.nav__item--dropdown::after {
-  content: '';
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  height: 8px;
-  background: transparent;
-  pointer-events: auto;
-}
-
 .nav__link--parent {
   display: flex;
   align-items: center;
   gap: 4px;
   cursor: pointer;
-  padding-bottom: 12px;
-  margin-bottom: -12px;
 }
 
 .nav__chevron {
@@ -945,8 +932,7 @@
   padding: 6px 0;
 }
 
-.nav__item--dropdown:hover .nav__dropdown,
-.nav__item--dropdown:focus-within .nav__dropdown {
+.nav__item--dropdown.is-open .nav__dropdown {
   opacity: 1;
   pointer-events: auto;
 }
