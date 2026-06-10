@@ -80,6 +80,13 @@
   .whatsapp-float__tooltip {
     display: none;
   }
+
+  .cart-toggle {
+    left: var(--space-sm);
+    bottom: var(--space-sm);
+    width: 50px;
+    height: 50px;
+  }
 }
 
 /* === MOBILE FIXES COMPLETOS === */
