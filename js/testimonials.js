@@ -15,7 +15,7 @@
   });
 
   const dots = Array.from(dotsWrap.children);
-  const AUTOPLAY_DELAY = 6000;
+  const AUTOPLAY_DELAY = 4000;
   let autoplayTimer = null;
 
   function getStep() {
