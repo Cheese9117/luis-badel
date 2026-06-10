@@ -204,13 +204,24 @@
   .product-card {
     text-align: left;
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .product-card__badge {
+    position: static;
+    align-self: flex-start;
+    margin-bottom: 0.5rem;
   }
 
   .product-card__icon {
     flex-shrink: 0;
+  }
+
+  .product-card .btn {
+    width: 100%;
+    text-align: center;
   }
 }
 
