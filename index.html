@@ -118,9 +118,12 @@
   <header class="navbar" id="navbar">
     <div class="container navbar__inner">
       <a href="#top" class="logo">
-        <span class="logo__main">Luis Badel</span>
-        <span class="logo__divider" aria-hidden="true"></span>
-        <span class="logo__sub">Sala de Belleza</span>
+        <img src="assets/images/logo.png" alt="" class="logo__img" width="48" height="48" onerror="this.remove()">
+        <span class="logo__text">
+          <span class="logo__main">Luis Badel</span>
+          <span class="logo__divider" aria-hidden="true"></span>
+          <span class="logo__sub">Sala de Belleza</span>
+        </span>
       </a>
       <nav class="nav" id="nav">
         <ul class="nav__list">
@@ -134,6 +137,7 @@
         </ul>
       </nav>
       <a class="btn btn--whatsapp" href="https://wa.me/573167302467?text=Hola%2C%20quiero%20agendar%20una%20cita" target="_blank" rel="noopener noreferrer">
+        <svg class="icon-svg" viewBox="0 0 32 32" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M16.04 2.67C8.65 2.67 2.67 8.65 2.67 16.04c0 2.55.7 5.03 2.04 7.2L2.67 29.33l6.26-1.97a13.34 13.34 0 0 0 7.11 2.05c7.39 0 13.37-5.98 13.37-13.37S23.43 2.67 16.04 2.67Zm0 24.13c-2.31 0-4.55-.62-6.5-1.79l-.47-.28-3.85 1.21 1.24-3.74-.3-.49a10.78 10.78 0 0 1-1.65-5.67c0-5.96 4.85-10.81 10.81-10.81 2.89 0 5.6 1.13 7.64 3.17a10.74 10.74 0 0 1 3.17 7.64c0 5.96-4.85 10.81-10.81 10.81Zm5.93-8.1c-.32-.16-1.92-.95-2.22-1.06-.3-.11-.52-.16-.74.16-.22.32-.85 1.06-1.04 1.27-.19.22-.38.24-.7.08-.32-.16-1.36-.5-2.59-1.6-.96-.85-1.6-1.91-1.79-2.23-.19-.32-.02-.49.14-.65.14-.14.32-.38.48-.57.16-.19.21-.32.32-.54.11-.22.05-.41-.03-.57-.08-.16-.74-1.78-1.01-2.44-.27-.64-.54-.55-.74-.56h-.63c-.22 0-.57.08-.87.41-.3.32-1.14 1.12-1.14 2.73 0 1.61 1.17 3.17 1.33 3.39.16.22 2.3 3.51 5.57 4.92.78.34 1.39.54 1.86.69.78.25 1.49.21 2.05.13.63-.09 1.92-.78 2.19-1.54.27-.76.27-1.41.19-1.54-.08-.14-.3-.22-.62-.38Z"/></svg>
         WhatsApp
       </a>
       <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
@@ -327,6 +331,9 @@
             <a class="btn btn--outline" href="https://wa.me/573167302467?text=Hola%2C%20quiero%20consultar%20sobre%20productos%20de%20Productos%20para%20color" target="_blank" rel="noopener noreferrer">Consultar</a>
           </article>
         </div>
+        <div class="products__cta reveal">
+          <a href="productos.html" class="btn btn--primary btn--lg">Ver catálogo completo →</a>
+        </div>
       </div>
     </section>
 
@@ -363,20 +370,28 @@
         <h2 class="section__title reveal">Lo que dicen nuestros clientes</h2>
         <div class="testimonials__grid">
           <blockquote class="testimonial reveal">
-            <p>"Excelente atención, el corte quedó perfecto y el ambiente es muy agradable. Totalmente recomendado."</p>
-            <cite>— Mariana Cardona</cite>
+            <span class="testimonial__stars" aria-hidden="true">★★★★★</span>
+            <p>"El servicio es excelente, Luis es un gran profesional además te hace recomendaciones súper buenas. La atención es 10/10"</p>
+            <cite>— Mary Duarte Herrera</cite>
+            <span class="testimonial__source">Local Guide · Google Maps</span>
           </blockquote>
           <blockquote class="testimonial reveal">
-            <p>"Llevo años yendo donde Luis, siempre sale uno satisfecho. Profesionales y muy puntuales."</p>
-            <cite>— Carlos Zapata</cite>
+            <span class="testimonial__stars" aria-hidden="true">★★★★★</span>
+            <p>"Ubicación fantástica. Gente estupenda, excelente servicio y precios increíbles para todos los excelentes servicios que ofrece. Desde el estilista hasta las uñas y el café y té que te ofrecen a tu llegada, este lugar es genial. Muy recomendable."</p>
+            <cite>— Manny Turino</cite>
+            <span class="testimonial__source">Google Maps</span>
           </blockquote>
           <blockquote class="testimonial reveal">
-            <p>"El mejor lugar de Laureles para un cambio de look. El color me quedó espectacular."</p>
-            <cite>— Valentina Ríos</cite>
+            <span class="testimonial__stars" aria-hidden="true">★★★★★</span>
+            <p>"Es cómodo, con todos los protocolos, excelente atención y muy buen trabajo cabello y uñas. Recomendable."</p>
+            <cite>— Ingrid Torres</cite>
+            <span class="testimonial__source">Local Guide · Google Maps</span>
           </blockquote>
           <blockquote class="testimonial reveal">
-            <p>"Buena ubicación, fácil de llegar y muy buena atención al cliente desde que entras."</p>
-            <cite>— Juan Pablo Mejía</cite>
+            <span class="testimonial__stars" aria-hidden="true">★★★★★</span>
+            <p>"¡Más que recomendado! Excelente servicio, productos de calidad que cuidan nuestro cabello. ¡Quedé feliz!"</p>
+            <cite>— Yuli Becerra Hoyos</cite>
+            <span class="testimonial__source">Local Guide · Google Maps</span>
           </blockquote>
         </div>
       </div>
@@ -451,16 +466,25 @@
             <li><span>Domingo</span><span>10:00 a.m. - 3:00 p.m.</span></li>
           </ul>
           <div class="location__social-links">
-            <a class="btn btn--outline" href="https://www.instagram.com/luisbadelsaladebelleza/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Luis Badel Sala de Belleza">Instagram</a>
-            <a class="btn btn--outline" href="https://web.facebook.com/people/Luis-badel-sala-de-belleza/100063726393266/" target="_blank" rel="noopener noreferrer" aria-label="Facebook de Luis Badel Sala de Belleza">Facebook</a>
+            <a class="btn btn--outline" href="https://www.instagram.com/luisbadelsaladebelleza/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Luis Badel Sala de Belleza">
+              <svg class="icon-svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              Instagram
+            </a>
+            <a class="btn btn--outline" href="https://web.facebook.com/people/Luis-badel-sala-de-belleza/100063726393266/" target="_blank" rel="noopener noreferrer" aria-label="Facebook de Luis Badel Sala de Belleza">
+              <svg class="icon-svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              Facebook
+            </a>
           </div>
         </div>
-        <div class="location__map reveal">
-          <iframe
-            title="Ubicación de Luis Badel Sala de Belleza en Laureles, Medellín"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.1234!2d-75.59250!3d6.24680!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8468eef03b8e4001%3A0x1234567890abcdef!2sCra.%2078%20%2354-75%2C%20Laureles%20-%20Estadio%2C%20Medell%C3%ADn%2C%20Antioquia!5e0!3m2!1ses-419!2sco!4v1700000000000!5m2!1ses-419!2sco"
-            width="100%" height="400" style="border:0;border-radius:var(--radius)" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
+        <div class="location__map-wrap reveal">
+          <div class="location__map">
+            <iframe
+              title="Ubicación de Luis Badel Sala de Belleza en Laureles, Medellín"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.1!2d-75.59500!3d6.24450!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8468eef4b7c2e1a7%3A0x9f3c2d1b4e8a5f6c!2sLuis%20Badel%20Sala%20de%20Belleza!5e0!3m2!1ses-419!2sco!4v1700000000000!5m2!1ses-419!2sco"
+              width="100%" height="400" style="border:0;border-radius:var(--radius)" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+          <a class="btn btn--outline location__map-link" href="https://maps.app.goo.gl/search/Luis+Badel+Sala+de+Belleza+Laureles+Medellin" target="_blank" rel="noopener noreferrer">Ver en Google Maps</a>
         </div>
       </div>
     </section>
@@ -471,17 +495,26 @@
     <div class="container footer__inner">
       <div class="footer__brand">
         <a href="#top" class="logo">
-          <span class="logo__main">Luis Badel</span>
-          <span class="logo__divider" aria-hidden="true"></span>
-          <span class="logo__sub">Sala de Belleza</span>
+          <img src="assets/images/logo.png" alt="" class="logo__img logo__img--footer" width="40" height="40" onerror="this.remove()">
+          <span class="logo__text">
+            <span class="logo__main">Luis Badel</span>
+            <span class="logo__divider" aria-hidden="true"></span>
+            <span class="logo__sub">Sala de Belleza</span>
+          </span>
         </a>
         <p class="footer__tagline">Tu cabello merece lo mejor.</p>
         <a class="footer__phone" href="tel:+573167302467">+57 316 7302467</a>
       </div>
       <div class="footer__social">
-        <a href="https://www.instagram.com/luisbadelsaladebelleza/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">Instagram</a>
-        <a href="https://web.facebook.com/people/Luis-badel-sala-de-belleza/100063726393266/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">Facebook</a>
-        <a href="https://wa.me/573167302467" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">WhatsApp</a>
+        <a class="footer__social-icon footer__social-icon--instagram" href="https://www.instagram.com/luisbadelsaladebelleza/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <a class="footer__social-icon footer__social-icon--facebook" href="https://web.facebook.com/people/Luis-badel-sala-de-belleza/100063726393266/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+        <a class="footer__social-icon footer__social-icon--whatsapp" href="https://wa.me/573167302467" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+          <svg viewBox="0 0 32 32" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M16.04 2.67C8.65 2.67 2.67 8.65 2.67 16.04c0 2.55.7 5.03 2.04 7.2L2.67 29.33l6.26-1.97a13.34 13.34 0 0 0 7.11 2.05c7.39 0 13.37-5.98 13.37-13.37S23.43 2.67 16.04 2.67Zm0 24.13c-2.31 0-4.55-.62-6.5-1.79l-.47-.28-3.85 1.21 1.24-3.74-.3-.49a10.78 10.78 0 0 1-1.65-5.67c0-5.96 4.85-10.81 10.81-10.81 2.89 0 5.6 1.13 7.64 3.17a10.74 10.74 0 0 1 3.17 7.64c0 5.96-4.85 10.81-10.81 10.81Zm5.93-8.1c-.32-.16-1.92-.95-2.22-1.06-.3-.11-.52-.16-.74.16-.22.32-.85 1.06-1.04 1.27-.19.22-.38.24-.7.08-.32-.16-1.36-.5-2.59-1.6-.96-.85-1.6-1.91-1.79-2.23-.19-.32-.02-.49.14-.65.14-.14.32-.38.48-.57.16-.19.21-.32.32-.54.11-.22.05-.41-.03-.57-.08-.16-.74-1.78-1.01-2.44-.27-.64-.54-.55-.74-.56h-.63c-.22 0-.57.08-.87.41-.3.32-1.14 1.12-1.14 2.73 0 1.61 1.17 3.17 1.33 3.39.16.22 2.3 3.51 5.57 4.92.78.34 1.39.54 1.86.69.78.25 1.49.21 2.05.13.63-.09 1.92-.78 2.19-1.54.27-.76.27-1.41.19-1.54-.08-.14-.3-.22-.62-.38Z"/></svg>
+        </a>
       </div>
       <p class="footer__copy">&copy; <span id="year"></span> Luis Badel Sala de Belleza. Todos los derechos reservados.</p>
       <p class="footer__signature">Desarrollado por <a href="https://github.com/Cheese9117" target="_blank" rel="noopener noreferrer">Juan Sebastián Henao</a></p>

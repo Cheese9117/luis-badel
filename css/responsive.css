@@ -51,9 +51,12 @@
     grid-template-columns: 1fr;
   }
 
+  .location__map-wrap {
+    order: -1;
+  }
+
   .location__map {
     height: 300px;
-    order: -1;
   }
 }
 
