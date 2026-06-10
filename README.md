@@ -7,6 +7,7 @@ Sitio web oficial de **Luis Badel Sala de Belleza**, salón de belleza ubicado e
 ```
 luis-badel/
 ├── index.html
+├── productos.html
 ├── css/
 │   ├── variables.css
 │   ├── base.css
@@ -15,10 +16,16 @@ luis-badel/
 ├── js/
 │   ├── nav.js
 │   ├── animations.js
-│   ├── booking.js
+│   ├── counters.js
+│   ├── testimonials.js
+│   ├── cal-embed.js
+│   ├── cart.js
+│   ├── i18n.js
 │   └── footer.js
 ├── assets/
 │   └── images/
+│       ├── logo.png
+│       ├── favicon-logo.png
 │       ├── foto-hero.jpg
 │       └── foto-1.jpg … foto-6.jpg
 ├── robots.txt
@@ -33,11 +40,9 @@ luis-badel/
 - **Facebook:** [Luis Badel Sala de Belleza](https://web.facebook.com/people/Luis-badel-sala-de-belleza/100063726393266/)
 - **Horarios:** Lun-Sáb 9:00 a.m. - 7:00 p.m. · Dom 10:00 a.m. - 3:00 p.m.
 
-## Pendientes
+## Idiomas
 
-- Reemplazar los archivos en `assets/images/` (`foto-hero.jpg`, `foto-1.jpg`–`foto-6.jpg`) con fotos reales del salón. Cada slot está marcado con un comentario `FOTO REAL` y una etiqueta visual "📸 Reemplazar" en el sitio.
-- Confirmar precios reales de servicios y catálogo de productos.
-- Confirmar horarios de atención.
+El sitio está disponible en español (por defecto) e inglés. El selector de idioma está disponible en la barra de navegación de ambas páginas y la preferencia se guarda en el navegador.
 
 ## Desarrollo
 
