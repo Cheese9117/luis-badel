@@ -86,3 +86,180 @@
     display: none;
   }
 }
+
+/* === MOBILE FIXES COMPLETOS === */
+
+/* Announcement bar — que no se corte */
+@media (max-width: 480px) {
+  .announcement p {
+    font-size: 0.75rem;
+    padding: 0 1rem;
+    text-align: center;
+    line-height: 1.4;
+  }
+}
+
+/* Hero — proporciones en móvil */
+@media (max-width: 560px) {
+  .hero {
+    min-height: 85vh;
+    padding: 6rem 0 4rem;
+  }
+
+  .hero__title {
+    font-size: clamp(2.2rem, 9vw, 3rem);
+    line-height: 1.1;
+  }
+
+  .hero__subtitle {
+    font-size: 0.95rem;
+  }
+
+  .hero__eyebrow {
+    font-size: 0.7rem;
+  }
+
+  .hero__actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+
+  .hero__actions .btn {
+    text-align: center;
+  }
+}
+
+/* Trust bar — 2 columnas compactas en móvil */
+@media (max-width: 560px) {
+  .trust__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .trust__number {
+    font-size: 1.5rem;
+  }
+
+  .trust__label {
+    font-size: 0.75rem;
+  }
+}
+
+/* Servicios — 1 columna en móvil */
+@media (max-width: 560px) {
+  .services__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Galería — ya tiene 1 columna, asegura altura de imagen */
+@media (max-width: 560px) {
+  .gallery__item img {
+    height: 220px;
+    object-fit: cover;
+    width: 100%;
+  }
+}
+
+/* Equipo — 1 columna en móvil pequeño */
+@media (max-width: 480px) {
+  .team__grid {
+    grid-template-columns: 1fr;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+}
+
+/* Testimonios — 1 columna en móvil */
+@media (max-width: 640px) {
+  .testimonials__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Booking — padding reducido */
+@media (max-width: 560px) {
+  .booking__grid {
+    gap: 2rem;
+  }
+
+  .booking__info .btn--lg {
+    width: 100%;
+    text-align: center;
+  }
+
+  .form__group input,
+  .form__group select {
+    font-size: 16px; /* evita zoom automático en iOS */
+  }
+}
+
+/* Productos grid — ya tiene 1 columna, verificar card */
+@media (max-width: 560px) {
+  .products__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-card {
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .product-card__icon {
+    flex-shrink: 0;
+  }
+}
+
+/* Footer — centrado en móvil */
+@media (max-width: 640px) {
+  .footer__inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .footer__brand {
+    align-items: center;
+  }
+
+  .footer__social {
+    justify-content: center;
+  }
+}
+
+/* Navbar logo — tamaño en móvil */
+@media (max-width: 560px) {
+  .logo img {
+    max-height: 38px;
+  }
+
+  .logo__main {
+    font-size: 1rem;
+  }
+
+  .logo__sub {
+    font-size: 0.6rem;
+  }
+}
+
+/* Secciones — padding reducido en móvil */
+@media (max-width: 560px) {
+  .services,
+  .gallery,
+  .products,
+  .team,
+  .testimonials,
+  .booking,
+  .location {
+    padding: var(--space-lg) 0;
+  }
+
+  .section__title {
+    font-size: clamp(1.8rem, 7vw, 2.5rem);
+  }
+}
