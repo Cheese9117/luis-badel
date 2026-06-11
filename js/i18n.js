@@ -143,6 +143,7 @@
 
       'whatsapp.tooltip': '¿Agendamos tu cita?',
       'whatsapp.aria': 'Escribir a Luis Badel Sala de Belleza por WhatsApp',
+      'backToTop.aria': 'Volver arriba',
 
       'cart.title': 'Tu pedido',
       'cart.closeAria': 'Cerrar pedido',
@@ -324,6 +325,7 @@
 
       'whatsapp.tooltip': 'Shall we book your appointment?',
       'whatsapp.aria': 'Message Luis Badel Sala de Belleza on WhatsApp',
+      'backToTop.aria': 'Back to top',
 
       'cart.title': 'Your order',
       'cart.closeAria': 'Close order',

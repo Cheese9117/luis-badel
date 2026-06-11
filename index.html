@@ -109,6 +109,8 @@
 </head>
 <body>
 
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
   <div class="announcement">
     <p data-i18n="announcement.text">✨ Agenda tu cita por WhatsApp · +57 316 7302467 · Laureles, Medellín</p>
   </div>
@@ -176,6 +178,7 @@
           <a class="btn btn--outline" href="https://wa.me/573167302467?text=Hola%2C%20quiero%20agendar%20una%20cita" target="_blank" rel="noopener noreferrer" data-i18n="hero.whatsapp">Escríbenos</a>
         </div>
       </div>
+      <div class="hero__scroll-cue" aria-hidden="true"></div>
     </section>
 
     <!-- TRUST BAR -->
@@ -564,6 +567,10 @@
       <p class="footer__signature"><span data-i18n="footer.developedBy">Desarrollado por</span> <a href="https://github.com/Cheese9117" target="_blank" rel="noopener noreferrer">Juan Sebastián Henao</a></p>
     </div>
   </footer>
+
+  <button type="button" class="back-to-top" id="backToTop" aria-label="Volver arriba" data-i18n-attr='{"aria-label":"backToTop.aria"}'>
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
 
   <a class="whatsapp-float" href="https://wa.me/573167302467?text=Hola%2C%20quiero%20agendar%20una%20cita%20en%20Luis%20Badel%20Sala%20de%20Belleza" target="_blank" rel="noopener noreferrer" aria-label="Escribir a Luis Badel Sala de Belleza por WhatsApp" data-i18n-attr='{"aria-label":"whatsapp.aria"}'>
     <span class="whatsapp-float__tooltip" data-i18n="whatsapp.tooltip">¿Agendamos tu cita?</span>

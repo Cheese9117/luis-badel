@@ -20,3 +20,35 @@
 
   elements.forEach((el) => observer.observe(el));
 })();
+
+(function () {
+  const progressBar = document.getElementById('scrollProgress');
+  const backToTop = document.getElementById('backToTop');
+
+  if (!progressBar && !backToTop) {
+    return;
+  }
+
+  const updateOnScroll = () => {
+    const scrollTop = window.scrollY;
+
+    if (progressBar) {
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+      progressBar.style.width = `${progress}%`;
+    }
+
+    if (backToTop) {
+      backToTop.classList.toggle('is-visible', scrollTop > 480);
+    }
+  };
+
+  if (backToTop) {
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  window.addEventListener('scroll', updateOnScroll, { passive: true });
+  updateOnScroll();
+})();
