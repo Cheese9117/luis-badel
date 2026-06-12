@@ -94,8 +94,8 @@
   justify-content: space-between;
   width: 100%;
   gap: 2rem;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-top: 2.75rem;
+  padding-bottom: 2.75rem;
   transition: padding var(--transition);
 }
 
@@ -295,6 +295,20 @@
   height: 2px;
   width: 100%;
   background: currentColor;
+  transform-origin: center;
+  transition: transform var(--transition), opacity var(--transition);
+}
+
+.nav__toggle.is-active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.nav__toggle.is-active span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav__toggle.is-active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
 }
 
 /* Hero */

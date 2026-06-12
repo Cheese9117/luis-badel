@@ -8,10 +8,19 @@
     img.addEventListener('error', () => img.remove());
   });
 
+  // Cierra el menú móvil desplegable y resetea el botón hamburguesa
+  const closeMobileNav = () => {
+    if (!nav || !toggle) return;
+    nav.classList.remove('is-open');
+    toggle.classList.remove('is-active');
+    toggle.setAttribute('aria-expanded', 'false');
+  };
+
   // Navbar scroll effect — transparente en el tope, sólido tras 50px de scroll
   if (navbar) {
     const onScroll = () => {
       navbar.classList.toggle('navbar-scrolled', window.scrollY > 50);
+      closeMobileNav();
     };
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
@@ -19,16 +28,24 @@
 
   // Mobile menu toggle
   if (toggle && nav) {
-    toggle.addEventListener('click', () => {
+    toggle.addEventListener('click', (e) => {
+      e.stopPropagation();
       const isOpen = nav.classList.toggle('is-open');
+      toggle.classList.toggle('is-active', isOpen);
       toggle.setAttribute('aria-expanded', String(isOpen));
     });
 
     nav.querySelectorAll('a:not(.nav__link--parent)').forEach((link) => {
       link.addEventListener('click', () => {
-        nav.classList.remove('is-open');
-        toggle.setAttribute('aria-expanded', 'false');
+        closeMobileNav();
       });
+    });
+
+    // Cierra el menú al tocar fuera del panel o del botón hamburguesa
+    document.addEventListener('click', (e) => {
+      if (!nav.classList.contains('is-open')) return;
+      if (nav.contains(e.target) || toggle.contains(e.target)) return;
+      closeMobileNav();
     });
   }
 
