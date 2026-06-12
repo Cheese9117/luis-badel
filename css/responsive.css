@@ -29,13 +29,6 @@
     border-bottom: 1px solid rgba(26, 26, 26, 0.08);
   }
 
-  .navbar.navbar-scrolled .nav.is-open {
-    background: var(--color-primary);
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
-    border-bottom-color: rgba(255, 255, 255, 0.12);
-  }
-
   .nav__list {
     flex-direction: column;
     padding: var(--space-sm) var(--space-md);
@@ -47,14 +40,6 @@
     font-size: 0.95rem;
   }
 
-  .navbar.navbar-scrolled .nav__list a {
-    color: var(--color-white);
-  }
-
-  .navbar.navbar-scrolled .nav__dropdown-link {
-    color: var(--color-white);
-  }
-
   .nav__toggle {
     display: flex;
     position: absolute;
@@ -63,15 +48,7 @@
     transform: translateY(-50%);
     z-index: 2;
     width: 22px;
-    height: 24px;
-  }
-
-  .nav__toggle.is-active span:nth-child(1) {
-    transform: translateY(11px) rotate(45deg);
-  }
-
-  .nav__toggle.is-active span:nth-child(3) {
-    transform: translateY(-11px) rotate(-45deg);
+    height: 18px;
   }
 
   /* Navbar sólido al abrir el menú, sin oscurecer el panel desplegable */
@@ -108,8 +85,8 @@
   }
 
   #navbar .navbar__inner {
-    padding-top: 1.2rem;
-    padding-bottom: 1.2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 
   /* Logo — centrado de forma absoluta, con la misma metamorfosis texto/isotipo que escritorio */
@@ -164,23 +141,8 @@
     color: var(--color-white);
   }
 
-  .navbar.navbar-scrolled .lang-switch--mobile {
-    border-top-color: rgba(255, 255, 255, 0.12);
-  }
-
-  .navbar.navbar-scrolled .lang-switch--mobile .lang-switch__btn {
-    border-color: var(--color-white);
-    color: var(--color-white);
-  }
-
-  .navbar.navbar-scrolled .lang-switch--mobile .lang-switch__btn.is-active {
-    background: var(--color-accent);
-    border-color: var(--color-accent);
-    color: var(--color-white);
-  }
-
   /* Quita cualquier resto de fondo/borde sólido en el navbar transparente al cargar */
-  header.navbar:not(.navbar-scrolled) {
+  header.navbar:not(.navbar-scrolled):not(.menu-open) {
     background-color: transparent !important;
     border: none !important;
     box-shadow: none !important;
