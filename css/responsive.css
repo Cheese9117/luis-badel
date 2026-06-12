@@ -27,7 +27,21 @@
   }
 
   .navbar__inner {
+    display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .navbar__inner .logo {
+    order: 1;
+  }
+
+  .navbar__actions {
+    order: 2;
+  }
+
+  .navbar__inner .nav {
+    order: 3;
   }
 
   .btn--whatsapp {

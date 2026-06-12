@@ -83,12 +83,27 @@
 }
 
 .navbar__inner {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  justify-content: space-between;
   padding-top: var(--space-sm);
   padding-bottom: var(--space-sm);
   gap: var(--space-md);
+}
+
+.navbar__inner .nav {
+  justify-self: start;
+}
+
+.navbar__inner .logo {
+  justify-self: center;
+}
+
+.navbar__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  justify-self: end;
 }
 
 /* Logo */
