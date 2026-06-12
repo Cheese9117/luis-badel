@@ -72,27 +72,25 @@
 
 .navbar__inner {
   position: relative;
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  display: flex;
   align-items: center;
+  justify-content: space-between;
   padding-top: var(--space-sm);
   padding-bottom: var(--space-sm);
   gap: var(--space-md);
 }
 
-.navbar__inner .nav {
-  justify-self: start;
-}
-
 .navbar__inner .logo {
-  justify-self: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .navbar__actions {
   display: flex;
   align-items: center;
   gap: var(--space-sm);
-  justify-self: end;
 }
 
 /* Logo */

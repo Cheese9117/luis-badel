@@ -8,10 +8,15 @@
     img.addEventListener('error', () => img.remove());
   });
 
-  // Navbar scroll effect
+  // Navbar scroll effect — stays transparent over the full hero, then solidifies
   if (navbar) {
+    const heroEl = document.querySelector('.hero, .page-hero');
+    const scrollThreshold = heroEl
+      ? Math.max(heroEl.offsetHeight - navbar.offsetHeight, 8)
+      : 8;
+
     const onScroll = () => {
-      navbar.classList.toggle('is-scrolled', window.scrollY > 8);
+      navbar.classList.toggle('is-scrolled', window.scrollY > scrollThreshold);
     };
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
