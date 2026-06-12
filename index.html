@@ -21,6 +21,7 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:locale" content="es_CO">
+  <meta property="og:locale:alternate" content="en_US">
   <meta property="og:site_name" content="Luis Badel Sala de Belleza">
   <meta property="business:contact_data:street_address" content="Cra. 78 #54-75">
   <meta property="business:contact_data:locality" content="Laureles - Estadio">
@@ -53,6 +54,44 @@
       "ratingValue": "4.6",
       "reviewCount": "50"
     },
+    "review": [
+      {
+        "@type": "Review",
+        "author": {"@type": "Person", "name": "Mary Duarte Herrera"},
+        "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+        "reviewBody": "El servicio es excelente, Luis es un gran profesional además te hace recomendaciones súper buenas. La atención es 10/10."
+      },
+      {
+        "@type": "Review",
+        "author": {"@type": "Person", "name": "Manny Turino"},
+        "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+        "reviewBody": "Ubicación fantástica. Gente estupenda, excelente servicio y precios increíbles para todos los excelentes servicios que ofrece. Muy recomendable."
+      },
+      {
+        "@type": "Review",
+        "author": {"@type": "Person", "name": "Ingrid Torres"},
+        "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+        "reviewBody": "Es cómodo, con todos los protocolos, excelente atención y muy buen trabajo cabello y uñas. Recomendable."
+      },
+      {
+        "@type": "Review",
+        "author": {"@type": "Person", "name": "Yuli Becerra Hoyos"},
+        "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+        "reviewBody": "Más que recomendado. Excelente servicio, productos de calidad que cuidan nuestro cabello. Quedé feliz."
+      },
+      {
+        "@type": "Review",
+        "author": {"@type": "Person", "name": "José Fredy Cortes Zuleta"},
+        "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+        "reviewBody": "Una de las mejores salas de belleza de Medellín."
+      },
+      {
+        "@type": "Review",
+        "author": {"@type": "Person", "name": "Elis Alejandro Acevedo Vides"},
+        "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+        "reviewBody": "Un lugar tranquilo, fresco y la atención increíble."
+      }
+    ],
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Cra. 78 #54-75",
@@ -92,10 +131,63 @@
   }
   </script>
 
+  <!-- ═══ JSON-LD FAQ SCHEMA ═══ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Necesito reservar cita o atienden por orden de llegada?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Recomendamos reservar con anticipación, especialmente para color y tratamientos de keratina, para garantizar tu espacio con el especialista de tu preferencia. También recibimos clientes sin cita según disponibilidad."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué métodos de pago aceptan?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Aceptamos efectivo, tarjetas débito y crédito, y transferencias por Nequi y Bancolombia."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué productos y marcas utilizan?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Trabajamos con productos profesionales de alta calidad para coloración, keratina y tratamientos capilares, seleccionados para cuidar la salud de tu cabello."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Atienden a hombres y mujeres?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí. Contamos con servicios de barbería para caballero, además de cortes, color, tratamientos, manicure y pedicure para toda la familia."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cómo llego y hay parqueadero cerca?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Estamos en la Cra. 78 #54-75, Laureles - Estadio, una zona con buena disponibilidad de parqueaderos públicos y zonas de parqueo en la calle cerca al salón."
+        }
+      }
+    ]
+  }
+  </script>
+
   <!-- ═══ FONTS ═══ -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- ═══ LCP PRELOAD ═══ -->
+  <link rel="preload" as="image" href="assets/images/foto-hero.jpg" fetchpriority="high">
 
   <!-- ═══ STYLES ═══ -->
   <link rel="stylesheet" href="css/variables.css">
@@ -145,6 +237,7 @@
           <li><a href="#testimonios" data-i18n="nav.testimonials">Opiniones</a></li>
           <li><a href="#reservar" data-i18n="nav.booking">Reservar</a></li>
           <li><a href="#ubicacion" data-i18n="nav.location">Ubicación</a></li>
+          <li><a href="#faq" data-i18n="nav.faq">FAQ</a></li>
         </ul>
       </nav>
       <div class="lang-switch" role="group" aria-label="Idioma / Language">
@@ -167,7 +260,7 @@
 
     <!-- HERO -->
     <section class="hero">
-      <img class="hero__bg" src="assets/images/foto-hero.jpg" alt="Fachada e interior de Luis Badel Sala de Belleza" width="1122" height="1402">
+      <img class="hero__bg" src="assets/images/foto-hero.jpg" alt="Fachada e interior de Luis Badel Sala de Belleza" width="1122" height="1402" fetchpriority="high" decoding="async">
       <div class="hero__overlay" aria-hidden="true"></div>
       <div class="container hero__content reveal">
         <p class="hero__eyebrow" data-i18n="hero.location">Laureles · Medellín</p>
@@ -536,6 +629,36 @@
       </div>
     </section>
 
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+      <div class="container">
+        <p class="section__eyebrow reveal" data-i18n="faq.eyebrow">Resolvemos tus dudas</p>
+        <h2 class="section__title reveal" data-i18n="faq.title">Preguntas frecuentes</h2>
+        <div class="faq__list reveal">
+          <details class="faq__item" name="faq">
+            <summary class="faq__question" data-i18n="faq.q1">¿Necesito reservar cita o atienden por orden de llegada?</summary>
+            <p class="faq__answer" data-i18n="faq.a1">Recomendamos reservar con anticipación, especialmente para color y tratamientos de keratina, para garantizar tu espacio con el especialista de tu preferencia. También recibimos clientes sin cita según disponibilidad.</p>
+          </details>
+          <details class="faq__item" name="faq">
+            <summary class="faq__question" data-i18n="faq.q2">¿Qué métodos de pago aceptan?</summary>
+            <p class="faq__answer" data-i18n="faq.a2">Aceptamos efectivo, tarjetas débito y crédito, y transferencias por Nequi y Bancolombia.</p>
+          </details>
+          <details class="faq__item" name="faq">
+            <summary class="faq__question" data-i18n="faq.q3">¿Qué productos y marcas utilizan?</summary>
+            <p class="faq__answer" data-i18n="faq.a3">Trabajamos con productos profesionales de alta calidad para coloración, keratina y tratamientos capilares, seleccionados para cuidar la salud de tu cabello.</p>
+          </details>
+          <details class="faq__item" name="faq">
+            <summary class="faq__question" data-i18n="faq.q4">¿Atienden a hombres y mujeres?</summary>
+            <p class="faq__answer" data-i18n="faq.a4">Sí. Contamos con servicios de barbería para caballero, además de cortes, color, tratamientos, manicure y pedicure para toda la familia.</p>
+          </details>
+          <details class="faq__item" name="faq">
+            <summary class="faq__question" data-i18n="faq.q5">¿Cómo llego y hay parqueadero cerca?</summary>
+            <p class="faq__answer" data-i18n="faq.a5">Estamos en la Cra. 78 #54-75, Laureles - Estadio, una zona con buena disponibilidad de parqueaderos públicos y zonas de parqueo en la calle cerca al salón.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer class="footer">
@@ -603,6 +726,7 @@
   <script src="js/i18n.js" defer></script>
   <script src="js/nav.js" defer></script>
   <script src="js/animations.js" defer></script>
+  <script src="js/lightbox.js" defer></script>
   <script src="js/counters.js" defer></script>
   <script src="js/testimonials.js" defer></script>
   <script src="js/cart.js" defer></script>

@@ -52,3 +52,27 @@
   window.addEventListener('scroll', updateOnScroll, { passive: true });
   updateOnScroll();
 })();
+
+(function () {
+  const hero = document.querySelector('.hero');
+  const heroBg = document.querySelector('.hero__bg');
+
+  if (!hero || !heroBg) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  let ticking = false;
+
+  const updateParallax = () => {
+    const offset = hero.getBoundingClientRect().top * -0.15;
+    heroBg.style.transform = `scale(1.08) translateY(${offset}px)`;
+    ticking = false;
+  };
+
+  window.addEventListener('scroll', () => {
+    if (ticking) return;
+    ticking = true;
+    window.requestAnimationFrame(updateParallax);
+  }, { passive: true });
+
+  updateParallax();
+})();

@@ -19,6 +19,7 @@
       'nav.testimonials': 'Opiniones',
       'nav.booking': 'Reservar',
       'nav.location': 'Ubicación',
+      'nav.faq': 'Preguntas',
       'nav.cartAria': 'Ver tu pedido',
       'nav.menuAria': 'Abrir menú',
 
@@ -137,6 +138,24 @@
       'location.instagramAria': 'Instagram de Luis Badel Sala de Belleza',
       'location.facebookAria': 'Facebook de Luis Badel Sala de Belleza',
 
+      'faq.eyebrow': 'Resolvemos tus dudas',
+      'faq.title': 'Preguntas frecuentes',
+      'faq.q1': '¿Necesito reservar cita o atienden por orden de llegada?',
+      'faq.a1': 'Recomendamos reservar con anticipación, especialmente para color y tratamientos de keratina, para garantizar tu espacio con el especialista de tu preferencia. También recibimos clientes sin cita según disponibilidad.',
+      'faq.q2': '¿Qué métodos de pago aceptan?',
+      'faq.a2': 'Aceptamos efectivo, tarjetas débito y crédito, y transferencias por Nequi y Bancolombia.',
+      'faq.q3': '¿Qué productos y marcas utilizan?',
+      'faq.a3': 'Trabajamos con productos profesionales de alta calidad para coloración, keratina y tratamientos capilares, seleccionados para cuidar la salud de tu cabello.',
+      'faq.q4': '¿Atienden a hombres y mujeres?',
+      'faq.a4': 'Sí. Contamos con servicios de barbería para caballero, además de cortes, color, tratamientos, manicure y pedicure para toda la familia.',
+      'faq.q5': '¿Cómo llego y hay parqueadero cerca?',
+      'faq.a5': 'Estamos en la Cra. 78 #54-75, Laureles - Estadio, una zona con buena disponibilidad de parqueaderos públicos y zonas de parqueo en la calle cerca al salón.',
+
+      'lightbox.open': 'Ampliar imagen',
+      'lightbox.close': 'Cerrar imagen',
+      'lightbox.prev': 'Imagen anterior',
+      'lightbox.next': 'Imagen siguiente',
+
       'footer.tagline': 'Tu cabello merece lo mejor.',
       'footer.rights': 'Luis Badel Sala de Belleza. Todos los derechos reservados.',
       'footer.developedBy': 'Desarrollado por',
@@ -201,6 +220,7 @@
       'nav.testimonials': 'Reviews',
       'nav.booking': 'Book now',
       'nav.location': 'Location',
+      'nav.faq': 'FAQ',
       'nav.cartAria': 'View your order',
       'nav.menuAria': 'Open menu',
 
