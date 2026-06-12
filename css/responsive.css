@@ -63,8 +63,18 @@
     transform: translateY(-50%);
     z-index: 2;
     width: 28px;
-    height: 22px;
+    height: 24px;
     padding: 4px 0;
+  }
+
+  .nav__cart {
+    width: 44px;
+    height: 44px;
+  }
+
+  .nav__cart-icon {
+    width: 24px;
+    height: 24px;
   }
 
   .navbar__inner {
@@ -82,8 +92,8 @@
   }
 
   .navbar__inner {
-    padding-top: 1.75rem;
-    padding-bottom: 1.75rem;
+    padding-top: 2.2rem;
+    padding-bottom: 2.2rem;
   }
 
   /* Logo — centrado de forma absoluta, con la misma metamorfosis texto/isotipo que escritorio */
