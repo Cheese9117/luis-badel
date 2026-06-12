@@ -21,6 +21,10 @@
     gap: var(--space-sm);
   }
 
+  .nav__item--mobile-only {
+    display: block;
+  }
+
   .nav__toggle {
     display: flex;
     position: absolute;

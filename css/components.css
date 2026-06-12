@@ -88,9 +88,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
+  gap: 2rem;
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
-  gap: var(--space-md);
 }
 
 /* Bloque izquierdo — enlaces de navegación */
@@ -98,24 +99,16 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  flex: 1 1 auto;
+  flex: 1 1 0%;
   min-width: 0;
 }
 
-/* Bloque central — logo, centrado de forma absoluta respecto al navbar */
+/* Bloque central — logo, con ancho propio para no desplazar a los bloques laterales */
 .nav-center {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
   display: flex;
   align-items: center;
   justify-content: center;
-  pointer-events: none;
-}
-
-.nav-center .logo {
-  pointer-events: auto;
+  flex: 0 0 auto;
 }
 
 /* Bloque derecho — carrito, idioma y menú móvil */
@@ -124,7 +117,7 @@
   align-items: center;
   justify-content: flex-end;
   gap: 1.5rem;
-  flex: 1 1 auto;
+  flex: 1 1 0%;
   min-width: 0;
 }
 
@@ -179,6 +172,12 @@
 
 .nav__list a:hover {
   color: var(--color-accent);
+}
+
+/* Enlaces secundarios — solo en el menú móvil (Reservar tiene CTA propio en el hero,
+   Ubicación y FAQ se alcanzan con scroll natural o desde el footer) */
+.nav__item--mobile-only {
+  display: none;
 }
 
 .nav__toggle {
