@@ -187,7 +187,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 
   <!-- ═══ LCP PRELOAD ═══ -->
-  <link rel="preload" as="image" href="assets/images/foto-hero.jpg" fetchpriority="high">
+  <link rel="preload" as="image" type="image/webp" href="assets/images/foto-hero.webp" imagesrcset="assets/images/foto-hero-800.webp 800w, assets/images/foto-hero.webp 1122w" imagesizes="100vw" fetchpriority="high">
 
   <!-- ═══ STYLES ═══ -->
   <link rel="stylesheet" href="css/variables.css">
@@ -260,7 +260,10 @@
 
     <!-- HERO -->
     <section class="hero">
-      <img class="hero__bg" src="assets/images/foto-hero.jpg" alt="Fachada e interior de Luis Badel Sala de Belleza" width="1122" height="1402" fetchpriority="high" decoding="async">
+      <picture>
+        <source type="image/webp" srcset="assets/images/foto-hero-800.webp 800w, assets/images/foto-hero.webp 1122w" sizes="100vw">
+        <img class="hero__bg" src="assets/images/foto-hero.jpg" srcset="assets/images/foto-hero-800.jpg 800w, assets/images/foto-hero.jpg 1122w" sizes="100vw" alt="Fachada e interior de Luis Badel Sala de Belleza" width="1122" height="1402" fetchpriority="high" decoding="async">
+      </picture>
       <div class="hero__overlay" aria-hidden="true"></div>
       <div class="container hero__content reveal">
         <p class="hero__eyebrow" data-i18n="hero.location">Laureles · Medellín</p>
@@ -354,27 +357,45 @@
         <h2 class="section__title reveal" data-i18n="gallery.title">Galería</h2>
         <div class="gallery__grid">
           <figure class="gallery__item reveal">
-            <img src="assets/images/foto-1.jpg" alt="Interior del salón Luis Badel" data-i18n-attr='{"alt":"gallery.alt1"}' width="800" height="600" loading="lazy">
+            <picture>
+              <source type="image/webp" srcset="assets/images/foto-1-480.webp 480w, assets/images/foto-1.webp 686w" sizes="(max-width: 560px) 100vw, (max-width: 900px) 50vw, 33vw">
+              <img src="assets/images/foto-1.jpg" srcset="assets/images/foto-1-480.jpg 480w, assets/images/foto-1.jpg 686w" sizes="(max-width: 560px) 100vw, (max-width: 900px) 50vw, 33vw" alt="Interior del salón Luis Badel" data-i18n-attr='{"alt":"gallery.alt1"}' width="686" height="829" loading="lazy">
+            </picture>
             <figcaption data-i18n="gallery.caption1">Interior del salón</figcaption>
           </figure>
           <figure class="gallery__item reveal">
-            <img src="assets/images/foto-2.jpg" alt="Zona de coloración del salón" data-i18n-attr='{"alt":"gallery.alt2"}' width="800" height="600" loading="lazy">
+            <picture>
+              <source type="image/webp" srcset="assets/images/foto-2-480.webp 480w, assets/images/foto-2.webp 680w" sizes="(max-width: 560px) 100vw, (max-width: 900px) 50vw, 33vw">
+              <img src="assets/images/foto-2.jpg" srcset="assets/images/foto-2-480.jpg 480w, assets/images/foto-2.jpg 680w" sizes="(max-width: 560px) 100vw, (max-width: 900px) 50vw, 33vw" alt="Zona de coloración del salón" data-i18n-attr='{"alt":"gallery.alt2"}' width="680" height="824" loading="lazy">
+            </picture>
             <figcaption data-i18n="gallery.caption2">Zona de coloración</figcaption>
           </figure>
           <figure class="gallery__item reveal">
-            <img src="assets/images/foto-3.jpg" alt="Trabajos de color realizados en el salón" data-i18n-attr='{"alt":"gallery.alt3"}' width="800" height="600" loading="lazy">
+            <picture>
+              <source type="image/webp" srcset="assets/images/foto-3-480.webp 480w, assets/images/foto-3.webp 608w" sizes="(max-width: 560px) 100vw, (max-width: 900px) 50vw, 33vw">
+              <img src="assets/images/foto-3.jpg" srcset="assets/images/foto-3-480.jpg 480w, assets/images/foto-3.jpg 608w" sizes="(max-width: 560px) 100vw, (max-width: 900px) 50vw, 33vw" alt="Trabajos de color realizados en el salón" data-i18n-attr='{"alt":"gallery.alt3"}' width="608" height="723" loading="lazy">
+            </picture>
             <figcaption data-i18n="gallery.caption3">Trabajos de color</figcaption>
           </figure>
           <figure class="gallery__item reveal">
-            <img src="assets/images/foto-4.jpg" alt="Cortes y estilizado realizados en el salón" data-i18n-attr='{"alt":"gallery.alt4"}' width="800" height="600" loading="lazy">
+            <picture>
+              <source type="image/webp" srcset="assets/images/foto-4-480.webp 480w, assets/images/foto-4.webp 578w" sizes="(max-width: 560px) 100vw, (max-width: 900px) 50vw, 33vw">
+              <img src="assets/images/foto-4.jpg" srcset="assets/images/foto-4-480.jpg 480w, assets/images/foto-4.jpg 578w" sizes="(max-width: 560px) 100vw, (max-width: 900px) 50vw, 33vw" alt="Cortes y estilizado realizados en el salón" data-i18n-attr='{"alt":"gallery.alt4"}' width="578" height="766" loading="lazy">
+            </picture>
             <figcaption data-i18n="gallery.caption4">Cortes y estilizado</figcaption>
           </figure>
           <figure class="gallery__item reveal">
-            <img src="assets/images/foto-5.jpg" alt="Servicio de manicure y pedicure" data-i18n-attr='{"alt":"gallery.alt5"}' width="800" height="600" loading="lazy">
+            <picture>
+              <source type="image/webp" srcset="assets/images/foto-5-480.webp 480w, assets/images/foto-5.webp 584w" sizes="(max-width: 560px) 100vw, (max-width: 900px) 50vw, 33vw">
+              <img src="assets/images/foto-5.jpg" srcset="assets/images/foto-5-480.jpg 480w, assets/images/foto-5.jpg 584w" sizes="(max-width: 560px) 100vw, (max-width: 900px) 50vw, 33vw" alt="Servicio de manicure y pedicure" data-i18n-attr='{"alt":"gallery.alt5"}' width="584" height="878" loading="lazy">
+            </picture>
             <figcaption data-i18n="gallery.caption5">Manicure y pedicure</figcaption>
           </figure>
           <figure class="gallery__item reveal">
-            <img src="assets/images/foto-6.jpg" alt="Ambiente y detalles decorativos del salón" data-i18n-attr='{"alt":"gallery.alt6"}' width="800" height="600" loading="lazy">
+            <picture>
+              <source type="image/webp" srcset="assets/images/foto-6-480.webp 480w, assets/images/foto-6.webp 584w" sizes="(max-width: 560px) 100vw, (max-width: 900px) 50vw, 33vw">
+              <img src="assets/images/foto-6.jpg" srcset="assets/images/foto-6-480.jpg 480w, assets/images/foto-6.jpg 584w" sizes="(max-width: 560px) 100vw, (max-width: 900px) 50vw, 33vw" alt="Ambiente y detalles decorativos del salón" data-i18n-attr='{"alt":"gallery.alt6"}' width="584" height="841" loading="lazy">
+            </picture>
             <figcaption data-i18n="gallery.caption6">Ambiente y detalles</figcaption>
           </figure>
         </div>
