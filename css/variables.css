@@ -17,6 +17,7 @@
   --radius-lg: 16px;
   --transition: 0.3s ease;
   --transition-navbar: 0.2s ease;
+  --transition-navbar-text: 0.12s ease;
   --ease-premium: cubic-bezier(0.16, 1, 0.3, 1);
 
   --space-xs: 0.5rem;

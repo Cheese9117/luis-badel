@@ -60,7 +60,9 @@
   background-color: rgba(250, 250, 248, 0);
   color: var(--color-white);
   box-shadow: 0 2px 16px rgba(26, 26, 26, 0);
-  transition: background-color var(--transition-navbar), color var(--transition-navbar), box-shadow var(--transition-navbar), backdrop-filter var(--transition-navbar);
+  /* El color del texto resuelve más rápido que el fondo para que nunca
+     coincidan a mitad de camino en un gris de bajo contraste */
+  transition: background-color var(--transition-navbar), color var(--transition-navbar-text), box-shadow var(--transition-navbar), backdrop-filter var(--transition-navbar);
 }
 
 /* Estado A: en el hero, el navbar transparente se vuelve sólido al pasar el cursor
@@ -140,7 +142,7 @@
   font-size: 1.4rem;
   font-weight: 700;
   color: inherit;
-  transition: color var(--transition-navbar);
+  transition: color var(--transition-navbar-text);
 }
 
 .logo__divider {
@@ -192,7 +194,7 @@
   font-size: 0.85rem;
   font-weight: 500;
   white-space: nowrap;
-  transition: color var(--transition-navbar);
+  transition: color var(--transition-navbar-text);
 }
 
 .nav__list a:hover {
@@ -209,7 +211,7 @@
   border: none;
   color: inherit;
   cursor: pointer;
-  transition: color var(--transition-navbar);
+  transition: color var(--transition-navbar-text);
 }
 
 /* Selector de idioma — integrado en el navbar (desktop) y en el panel móvil */
@@ -224,7 +226,7 @@
   background: none;
   color: inherit;
   cursor: pointer;
-  transition: opacity var(--transition), color var(--transition-navbar), background var(--transition-navbar), border-color var(--transition-navbar);
+  transition: opacity var(--transition), color var(--transition-navbar-text), background var(--transition-navbar), border-color var(--transition-navbar);
 }
 
 /* Variante de escritorio — junto al carrito, tipografía mínima "ES / EN" */
@@ -248,7 +250,7 @@
 .lang-switch__sep {
   opacity: 0.35;
   font-size: 0.7rem;
-  transition: color var(--transition-navbar);
+  transition: color var(--transition-navbar-text);
 }
 
 /* Variante móvil — vive dentro del panel desplegable, oculta en escritorio */
@@ -269,7 +271,7 @@
   background: none;
   color: inherit;
   cursor: pointer;
-  transition: color var(--transition-navbar), fill var(--transition-navbar), stroke var(--transition-navbar);
+  transition: color var(--transition-navbar-text), fill var(--transition-navbar-text), stroke var(--transition-navbar-text);
 }
 
 .nav__cart:hover {
@@ -300,7 +302,7 @@
   width: 100%;
   background-color: currentColor;
   transform-origin: center;
-  transition: transform var(--transition), opacity var(--transition), background-color var(--transition-navbar);
+  transition: transform var(--transition), opacity var(--transition), background-color var(--transition-navbar-text);
 }
 
 .nav__toggle.is-active span:nth-child(1) {
@@ -1531,7 +1533,7 @@ body.cart-open {
 }
 
 .nav__chevron {
-  transition: transform 0.25s ease, stroke var(--transition-navbar);
+  transition: transform 0.25s ease, stroke var(--transition-navbar-text);
   flex-shrink: 0;
 }
 
