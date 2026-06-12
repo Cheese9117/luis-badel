@@ -23,17 +23,17 @@
 
   .nav.is-open {
     max-height: 380px;
-    background: rgba(26, 26, 26, 0.75);
+    background: rgba(250, 250, 248, 0.96);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    border-bottom: 1px solid rgba(26, 26, 26, 0.08);
   }
 
   .navbar.navbar-scrolled .nav.is-open {
-    background: var(--color-bg);
+    background: var(--color-primary);
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
-    border-bottom-color: var(--color-border);
+    border-bottom-color: rgba(255, 255, 255, 0.12);
   }
 
   .nav__list {
@@ -43,7 +43,16 @@
   }
 
   .nav__list a {
+    color: var(--color-primary);
     font-size: 0.95rem;
+  }
+
+  .navbar.navbar-scrolled .nav__list a {
+    color: var(--color-white);
+  }
+
+  .navbar.navbar-scrolled .nav__dropdown-link {
+    color: var(--color-white);
   }
 
   .nav__toggle {
