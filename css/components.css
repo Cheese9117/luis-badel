@@ -210,42 +210,47 @@
   cursor: pointer;
 }
 
-/* Language switcher — flota justo debajo del navbar, con colores propios (no depende del navbar) */
+/* Selector de idioma — integrado en el navbar (desktop) y en el panel móvil */
 .lang-switch {
-  position: absolute;
-  top: 90px;
-  right: 4%;
-  z-index: 90;
   display: flex;
   align-items: center;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: var(--radius);
-  overflow: hidden;
   flex-shrink: 0;
-  background: rgba(26, 26, 26, 0.35);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
 }
 
 .lang-switch__btn {
   border: none;
   background: none;
-  color: var(--color-white);
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  padding: 0.35rem 0.55rem;
+  color: inherit;
   cursor: pointer;
-  transition: background var(--transition), color var(--transition);
+  transition: opacity var(--transition), color var(--transition), background var(--transition), border-color var(--transition);
 }
 
-.lang-switch__btn.is-active {
-  background: var(--color-accent);
-  color: var(--color-white);
+/* Variante de escritorio — junto al carrito, tipografía mínima "ES / EN" */
+.lang-switch--nav {
+  gap: 0.35rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
 }
 
-.lang-switch__btn:not(.is-active):hover {
-  background: rgba(255, 255, 255, 0.15);
+.lang-switch--nav .lang-switch__btn {
+  padding: 0;
+  opacity: 0.55;
+}
+
+.lang-switch--nav .lang-switch__btn.is-active,
+.lang-switch--nav .lang-switch__btn:hover {
+  opacity: 1;
+}
+
+.lang-switch__sep {
+  opacity: 0.35;
+  font-size: 0.7rem;
+}
+
+/* Variante móvil — vive dentro del panel desplegable, oculta en escritorio */
+.lang-switch--mobile {
+  display: none;
 }
 
 /* Cart icon in navbar */
