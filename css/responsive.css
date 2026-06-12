@@ -14,15 +14,27 @@
     top: 100%;
     left: 0;
     right: 0;
-    background: var(--color-bg);
+    background: rgba(26, 26, 26, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid transparent;
     max-height: 0;
     overflow: hidden;
-    transition: max-height var(--transition);
+    transition: max-height var(--transition), background var(--transition);
+  }
+
+  .navbar.navbar-scrolled .nav {
+    background: var(--color-bg);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
   }
 
   .nav.is-open {
     max-height: 380px;
+    border-bottom-color: rgba(255, 255, 255, 0.15);
+  }
+
+  .navbar.navbar-scrolled .nav.is-open {
     border-bottom-color: var(--color-border);
   }
 
@@ -63,8 +75,8 @@
   }
 
   .navbar__inner {
-    padding-top: 1.2rem;
-    padding-bottom: 1.2rem;
+    padding-top: 1.75rem;
+    padding-bottom: 1.75rem;
   }
 
   /* Logo — centrado de forma absoluta, con la misma metamorfosis texto/isotipo que escritorio */
