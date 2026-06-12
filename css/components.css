@@ -140,6 +140,7 @@
   font-size: 1.4rem;
   font-weight: 700;
   color: inherit;
+  transition: color var(--transition);
 }
 
 .logo__divider {
@@ -208,6 +209,7 @@
   border: none;
   color: inherit;
   cursor: pointer;
+  transition: color var(--transition);
 }
 
 /* Selector de idioma — integrado en el navbar (desktop) y en el panel móvil */
@@ -246,6 +248,7 @@
 .lang-switch__sep {
   opacity: 0.35;
   font-size: 0.7rem;
+  transition: color var(--transition);
 }
 
 /* Variante móvil — vive dentro del panel desplegable, oculta en escritorio */
