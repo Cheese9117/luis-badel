@@ -84,7 +84,8 @@
 
 .navbar .container {
   max-width: 100%;
-  padding: 0 4%;
+  padding-left: 4%;
+  padding-right: 4%;
 }
 
 .navbar__inner {
@@ -94,8 +95,8 @@
   justify-content: space-between;
   width: 100%;
   gap: 2rem;
-  padding-top: 5.5rem;
-  padding-bottom: 5.5rem;
+  padding-top: 2.25rem;
+  padding-bottom: 2.25rem;
   transition: padding var(--transition);
 }
 
