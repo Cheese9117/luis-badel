@@ -23,7 +23,11 @@
 
   .nav__toggle {
     display: flex;
-    order: 3;
+    position: absolute;
+    left: var(--space-md);
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
   }
 
   .navbar__inner {
