@@ -169,15 +169,20 @@
 
 /* Metamorfosis del logo — texto sobre el navbar transparente, isotipo al hacer scroll */
 .navbar:not(.navbar-scrolled) .nav-center .logo__img {
-  display: none;
+  position: absolute;
+  opacity: 0;
+  transform: scale(0.85);
+  pointer-events: none;
 }
 
 .navbar.navbar-scrolled .nav-center .logo__text {
-  display: none;
+  position: absolute;
+  opacity: 0;
+  transform: scale(0.95);
+  pointer-events: none;
 }
 
 .navbar.navbar-scrolled .nav-center .logo__img {
-  display: block;
   max-height: 40px;
 }
 
@@ -1389,6 +1394,7 @@ body.cart-open {
 
 /* Logo con imagen */
 .logo {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 0.6rem;
@@ -1399,6 +1405,7 @@ body.cart-open {
   max-height: 48px;
   width: auto;
   border-radius: 50%;
+  transition: opacity var(--transition-navbar), transform var(--transition-navbar);
 }
 
 .logo__img--footer {
@@ -1410,6 +1417,7 @@ body.cart-open {
   flex-direction: column;
   line-height: 1.1;
   white-space: nowrap;
+  transition: opacity var(--transition-navbar), transform var(--transition-navbar);
 }
 
 /* Iconos inline en botones */
