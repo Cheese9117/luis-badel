@@ -91,7 +91,7 @@
     order: 3;
   }
 
-  .navbar__inner {
+  #navbar .navbar__inner {
     padding-top: 2.6rem;
     padding-bottom: 2.6rem;
   }
