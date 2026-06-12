@@ -15,6 +15,7 @@
     toggle.classList.remove('is-active');
     toggle.setAttribute('aria-expanded', 'false');
     document.body.classList.remove('no-scroll');
+    if (navbar) navbar.classList.toggle('navbar-scrolled', window.scrollY > 50);
   };
 
   // Navbar scroll effect — transparente en el tope, sólido tras 50px de scroll
@@ -35,6 +36,7 @@
       toggle.classList.toggle('is-active', isOpen);
       toggle.setAttribute('aria-expanded', String(isOpen));
       document.body.classList.toggle('no-scroll', isOpen);
+      if (navbar) navbar.classList.toggle('navbar-scrolled', isOpen || window.scrollY > 50);
     });
 
     nav.querySelectorAll('a:not(.nav__link--parent)').forEach((link) => {
