@@ -184,6 +184,16 @@
   background: var(--color-card);
 }
 
+/* Floating language switcher — visible only at the top of the page */
+.lang-switch--floating {
+  position: absolute;
+  top: var(--space-md);
+  right: var(--space-md);
+  z-index: 2;
+  background: var(--color-white);
+  box-shadow: var(--shadow-sm);
+}
+
 /* Cart icon in navbar */
 .nav__cart {
   position: relative;
@@ -1402,6 +1412,7 @@ body.cart-open {
 
 /* Hero de página interna (productos.html) */
 .page-hero {
+  position: relative;
   background: var(--color-primary);
   color: var(--color-white);
   padding: var(--space-xl) 0;

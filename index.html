@@ -240,10 +240,6 @@
           <li><a href="#faq" data-i18n="nav.faq">FAQ</a></li>
         </ul>
       </nav>
-      <div class="lang-switch" role="group" aria-label="Idioma / Language">
-        <button type="button" class="lang-switch__btn" data-lang-option="es" aria-pressed="false">ES</button>
-        <button type="button" class="lang-switch__btn" data-lang-option="en" aria-pressed="false">EN</button>
-      </div>
       <button type="button" class="nav__cart" id="cartToggle" aria-haspopup="dialog" aria-expanded="false" aria-controls="cartDrawer" data-i18n-attr='{"aria-label":"nav.cartAria"}' aria-label="Ver tu pedido">
         <svg class="nav__cart-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
           <path d="M3 3h2l.4 2M7 13h10l3-7H5.4M7 13 5.4 5M7 13l-1.4 2.8A1 1 0 0 0 6.5 17H17M9 21a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm9 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z"/>
@@ -260,6 +256,10 @@
 
     <!-- HERO -->
     <section class="hero">
+      <div class="lang-switch lang-switch--floating" role="group" aria-label="Idioma / Language">
+        <button type="button" class="lang-switch__btn" data-lang-option="es" aria-pressed="false">ES</button>
+        <button type="button" class="lang-switch__btn" data-lang-option="en" aria-pressed="false">EN</button>
+      </div>
       <picture>
         <source type="image/webp" srcset="assets/images/foto-hero-800.webp 800w, assets/images/foto-hero.webp 1122w" sizes="100vw">
         <img class="hero__bg" src="assets/images/foto-hero.jpg" srcset="assets/images/foto-hero-800.jpg 800w, assets/images/foto-hero.jpg 1122w" sizes="100vw" alt="Fachada e interior de Luis Badel Sala de Belleza" width="1122" height="1402" fetchpriority="high" decoding="async">

@@ -118,6 +118,11 @@
 
   <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
+  <div class="lang-switch lang-switch--floating" id="langSwitch" role="group" aria-label="Idioma / Language">
+    <button type="button" class="lang-switch__btn" data-lang-option="es" aria-pressed="false">ES</button>
+    <button type="button" class="lang-switch__btn" data-lang-option="en" aria-pressed="false">EN</button>
+  </div>
+
   <div class="announcement">
     <p data-i18n="announcement.text">✨ Agenda tu cita por WhatsApp · +57 316 7302467 · Laureles, Medellín</p>
   </div>
@@ -155,10 +160,6 @@
           <li><a href="index.html#faq" data-i18n="nav.faq">FAQ</a></li>
         </ul>
       </nav>
-      <div class="lang-switch" role="group" aria-label="Idioma / Language">
-        <button type="button" class="lang-switch__btn" data-lang-option="es" aria-pressed="false">ES</button>
-        <button type="button" class="lang-switch__btn" data-lang-option="en" aria-pressed="false">EN</button>
-      </div>
       <button type="button" class="nav__cart" id="cartToggle" aria-haspopup="dialog" aria-expanded="false" aria-controls="cartDrawer" aria-label="Ver tu pedido" data-i18n-attr='{"aria-label":"nav.cartAria"}'>
         <svg class="nav__cart-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
           <path d="M3 3h2l.4 2M7 13h10l3-7H5.4M7 13 5.4 5M7 13l-1.4 2.8A1 1 0 0 0 6.5 17H17M9 21a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm9 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z"/>
@@ -175,6 +176,10 @@
 
     <!-- HERO DE PÁGINA -->
     <section class="page-hero">
+      <div class="lang-switch lang-switch--floating" role="group" aria-label="Idioma / Language">
+        <button type="button" class="lang-switch__btn" data-lang-option="es" aria-pressed="false">ES</button>
+        <button type="button" class="lang-switch__btn" data-lang-option="en" aria-pressed="false">EN</button>
+      </div>
       <div class="container page-hero__content reveal">
         <p class="hero__eyebrow" data-i18n="product.badge">Disponible en salón</p>
         <h1 class="section__title" data-i18n="productsPage.title">Productos profesionales</h1>
