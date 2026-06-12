@@ -15,7 +15,7 @@
     left: 0;
     right: 0;
     background: var(--color-bg);
-    border-bottom: 1px solid var(--color-border);
+    border-bottom: 1px solid transparent;
     max-height: 0;
     overflow: hidden;
     transition: max-height var(--transition);
@@ -23,6 +23,7 @@
 
   .nav.is-open {
     max-height: 380px;
+    border-bottom-color: var(--color-border);
   }
 
   .nav__list {
@@ -70,12 +71,16 @@
     z-index: 1;
   }
 
-  .logo__img {
+  /* Isotipo siempre visible en móvil, sin importar el estado de scroll */
+  .navbar:not(.navbar-scrolled) .nav-center .logo__img,
+  .navbar.navbar-scrolled .nav-center .logo__img {
+    display: block;
     max-height: 42px;
     width: auto;
   }
 
-  .logo__text {
+  .navbar:not(.navbar-scrolled) .nav-center .logo__text,
+  .navbar.navbar-scrolled .nav-center .logo__text {
     display: none;
   }
 
