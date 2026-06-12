@@ -92,8 +92,8 @@
   }
 
   .navbar__inner {
-    padding-top: 2.2rem;
-    padding-bottom: 2.2rem;
+    padding-top: 2.6rem;
+    padding-bottom: 2.6rem;
   }
 
   /* Logo — centrado de forma absoluta, con la misma metamorfosis texto/isotipo que escritorio */
@@ -107,15 +107,15 @@
   }
 
   .logo__main {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
   }
 
   .logo__sub {
-    font-size: 0.55rem;
+    font-size: 0.6rem;
   }
 
   .navbar.navbar-scrolled .nav-center .logo__img {
-    max-height: 38px;
+    max-height: 44px;
   }
 
   /* Selector de idioma — oculto en la barra fija, visible al fondo del panel desplegable */
