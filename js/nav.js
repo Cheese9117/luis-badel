@@ -56,7 +56,7 @@
     var parentLink = item.querySelector('.nav__link--parent');
     if (parentLink) {
       parentLink.addEventListener('click', function (e) {
-        if (window.innerWidth <= 900) {
+        if (window.innerWidth <= 991) {
           e.preventDefault();
           item.classList.toggle('is-open');
         }

@@ -1,4 +1,14 @@
-@media (max-width: 900px) {
+@media (max-width: 1400px) {
+  .nav__list {
+    gap: 0.75rem;
+  }
+
+  .nav__list a {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 991px) {
   .nav {
     position: absolute;
     top: 100%;
@@ -21,17 +31,20 @@
     gap: var(--space-sm);
   }
 
-  .nav__item--mobile-only {
-    display: block;
+  .nav__list a {
+    font-size: 0.95rem;
   }
 
   .nav__toggle {
     display: flex;
     position: absolute;
-    left: var(--space-md);
+    left: var(--space-sm);
     top: 50%;
     transform: translateY(-50%);
-    z-index: 1;
+    z-index: 2;
+    width: 28px;
+    height: 22px;
+    padding: 4px 0;
   }
 
   .navbar__inner {
@@ -46,6 +59,29 @@
 
   .navbar__inner .nav {
     order: 3;
+  }
+
+  /* Logo — isotipo compacto y centrado de forma absoluta */
+  .nav-center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+
+  .logo__img {
+    max-height: 42px;
+    width: auto;
+  }
+
+  .logo__text {
+    display: none;
+  }
+
+  /* El selector de idioma flota en el hero, no en el navbar */
+  .lang-switch {
+    display: none;
   }
 
   .btn--whatsapp {
@@ -236,21 +272,6 @@
   }
 }
 
-/* Navbar logo — tamaño en móvil */
-@media (max-width: 560px) {
-  .logo img {
-    max-height: 38px;
-  }
-
-  .logo__main {
-    font-size: 1.25rem;
-  }
-
-  .logo__sub {
-    font-size: 0.6rem;
-  }
-}
-
 /* Secciones — padding reducido en móvil */
 @media (max-width: 560px) {
   .services,
@@ -268,7 +289,7 @@
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 991px) {
   .navbar__inner {
     overflow: visible;
   }
