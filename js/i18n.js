@@ -6,7 +6,6 @@
 
   const translations = {
     es: {
-      'announcement.text': '✨ Agenda tu cita por WhatsApp · +57 316 7302467 · Laureles, Medellín',
 
       'nav.services': 'Servicios',
       'nav.gallery': 'Galería',
@@ -207,7 +206,6 @@
       'pp.12.desc': 'Para peinados duraderos.'
     },
     en: {
-      'announcement.text': '✨ Book your appointment via WhatsApp · +57 316 7302467 · Laureles, Medellín',
 
       'nav.services': 'Services',
       'nav.gallery': 'Gallery',

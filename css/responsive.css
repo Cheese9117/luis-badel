@@ -29,11 +29,14 @@
   .navbar__inner {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-end;
   }
 
   .navbar__inner .logo {
-    order: 1;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
 
   .navbar__actions {
@@ -97,16 +100,6 @@
 }
 
 /* === MOBILE FIXES COMPLETOS === */
-
-/* Announcement bar — que no se corte */
-@media (max-width: 480px) {
-  .announcement p {
-    font-size: 0.75rem;
-    padding: 0 1rem;
-    text-align: center;
-    line-height: 1.4;
-  }
-}
 
 /* Hero — proporciones en móvil */
 @media (max-width: 560px) {
@@ -281,18 +274,6 @@
 
   .container {
     max-width: 100%;
-    padding: 0 1rem;
-  }
-
-  .announcement {
-    width: 100%;
-    overflow: hidden;
-  }
-
-  .announcement p {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
     padding: 0 1rem;
   }
 
