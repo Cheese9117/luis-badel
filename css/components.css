@@ -1026,6 +1026,11 @@
   height: 100%;
 }
 
+.location__map-iframe {
+  border: 0;
+  border-radius: var(--radius);
+}
+
 /* FAQ */
 .faq__list {
   max-width: 760px;

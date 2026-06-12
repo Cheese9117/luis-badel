@@ -18,6 +18,7 @@ luis-badel/
 │   ├── animations.js
 │   ├── counters.js
 │   ├── testimonials.js
+│   ├── lightbox.js
 │   ├── cal-embed.js
 │   ├── cart.js
 │   ├── i18n.js
