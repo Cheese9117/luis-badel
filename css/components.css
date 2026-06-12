@@ -269,7 +269,7 @@
   background: none;
   color: inherit;
   cursor: pointer;
-  transition: color var(--transition);
+  transition: color var(--transition), fill var(--transition), stroke var(--transition);
 }
 
 .nav__cart:hover {
@@ -298,9 +298,9 @@
   display: block;
   height: 2px;
   width: 100%;
-  background: currentColor;
+  background-color: currentColor;
   transform-origin: center;
-  transition: transform var(--transition), opacity var(--transition);
+  transition: transform var(--transition), opacity var(--transition), background-color var(--transition);
 }
 
 .nav__toggle.is-active span:nth-child(1) {
@@ -1531,7 +1531,7 @@ body.cart-open {
 }
 
 .nav__chevron {
-  transition: transform 0.25s ease;
+  transition: transform 0.25s ease, stroke var(--transition);
   flex-shrink: 0;
 }
 

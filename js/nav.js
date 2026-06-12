@@ -14,6 +14,7 @@
     nav.classList.remove('is-open');
     toggle.classList.remove('is-active');
     toggle.setAttribute('aria-expanded', 'false');
+    document.body.classList.remove('no-scroll');
   };
 
   // Navbar scroll effect — transparente en el tope, sólido tras 50px de scroll
@@ -33,6 +34,7 @@
       const isOpen = nav.classList.toggle('is-open');
       toggle.classList.toggle('is-active', isOpen);
       toggle.setAttribute('aria-expanded', String(isOpen));
+      document.body.classList.toggle('no-scroll', isOpen);
     });
 
     nav.querySelectorAll('a:not(.nav__link--parent)').forEach((link) => {
