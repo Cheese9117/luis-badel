@@ -62,31 +62,43 @@
     order: 3;
   }
 
-  /* Logo — isotipo compacto y centrado de forma absoluta */
+  .navbar__inner {
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+  }
+
+  /* Logo — centrado de forma absoluta, con la misma metamorfosis texto/isotipo que escritorio */
   .nav-center {
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
+    max-width: 60vw;
   }
 
-  /* Isotipo siempre visible en móvil, sin importar el estado de scroll */
-  .navbar:not(.navbar-scrolled) .nav-center .logo__img,
+  .logo__main {
+    font-size: 1.1rem;
+  }
+
+  .logo__sub {
+    font-size: 0.55rem;
+  }
+
   .navbar.navbar-scrolled .nav-center .logo__img {
-    display: block;
-    max-height: 42px;
-    width: auto;
-  }
-
-  .navbar:not(.navbar-scrolled) .nav-center .logo__text,
-  .navbar.navbar-scrolled .nav-center .logo__text {
-    display: none;
+    max-height: 38px;
   }
 
   /* El selector de idioma flota en el hero, no en el navbar */
   .lang-switch {
     display: none;
+  }
+
+  /* Quita cualquier resto de fondo/borde sólido en el navbar transparente al cargar */
+  header.navbar:not(.navbar-scrolled) {
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
   }
 
   .btn--whatsapp {
