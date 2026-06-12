@@ -39,7 +39,7 @@ luis-badel/
 - **WhatsApp:** +57 316 7302467
 - **Instagram:** [@luisbadelsaladebelleza](https://www.instagram.com/luisbadelsaladebelleza/)
 - **Facebook:** [Luis Badel Sala de Belleza](https://web.facebook.com/people/Luis-badel-sala-de-belleza/100063726393266/)
-- **Horarios:** Lun-Sáb 9:00 a.m. - 7:00 p.m. · Dom 10:00 a.m. - 3:00 p.m.
+- **Horarios:** Lun-Sáb 9:00 a.m. - 5:00 p.m. · Dom cerrado
 
 ## Idiomas
 
