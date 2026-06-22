@@ -542,8 +542,120 @@
 }
 
 /* Sections spacing */
-.services, .gallery, .products, .team, .testimonials, .booking, .location {
+.services, .gallery, .products, .team, .testimonials, .booking, .location, .before-after {
   padding: var(--space-xl) 0;
+}
+
+/* Before & after */
+.before-after {
+  background: var(--color-card);
+}
+
+.before-after__intro {
+  color: rgba(26,26,26,0.7);
+  margin-bottom: var(--space-md);
+  max-width: 480px;
+}
+
+.before-after__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--space-md);
+}
+
+.before-after__slider {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  cursor: ew-resize;
+  user-select: none;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition);
+  --ba-percent: 50%;
+}
+
+.before-after__slider:hover,
+.before-after__slider:focus-visible {
+  box-shadow: var(--shadow-md);
+  outline: none;
+}
+
+.before-after__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  pointer-events: none;
+}
+
+.before-after__before-wrap {
+  position: absolute;
+  inset: 0;
+  clip-path: inset(0 calc(100% - var(--ba-percent)) 0 0);
+}
+
+.before-after__tag {
+  position: absolute;
+  top: var(--space-xs);
+  z-index: 1;
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.6rem;
+  border-radius: 999px;
+  color: var(--color-white);
+  background: rgba(26,26,26,0.55);
+  backdrop-filter: blur(4px);
+  pointer-events: none;
+}
+
+.before-after__tag--before {
+  left: var(--space-xs);
+}
+
+.before-after__tag--after {
+  right: var(--space-xs);
+}
+
+.before-after__handle {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: var(--ba-percent);
+  width: 2px;
+  background: var(--color-white);
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.before-after__handle::before {
+  content: "";
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--color-white);
+  box-shadow: var(--shadow-sm);
+}
+
+.before-after__handle svg {
+  position: relative;
+  color: var(--color-primary);
+}
+
+.before-after__caption {
+  margin-top: var(--space-xs);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: center;
 }
 
 /* Services */

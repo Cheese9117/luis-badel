@@ -63,6 +63,15 @@
       'service.barber.desc': 'Cortes masculinos, diseño de barba y afeitado clásico con toallas calientes.',
       'service.barber.price': 'Desde $25.000',
 
+      'beforeAfter.eyebrow': 'Resultados reales',
+      'beforeAfter.title': 'Antes y después',
+      'beforeAfter.text': 'Arrastra el control para ver la transformación.',
+      'beforeAfter.labelBefore': 'Antes',
+      'beforeAfter.labelAfter': 'Después',
+      'beforeAfter.caption1': 'Color y mechas',
+      'beforeAfter.caption2': 'Corte de cabello',
+      'beforeAfter.caption3': 'Tratamiento capilar',
+
       'gallery.eyebrow': 'Inspiración',
       'gallery.title': 'Galería',
       'gallery.alt1': 'Corte de cabello moderno realizado en el salón',
@@ -262,6 +271,15 @@
       'service.barber.title': 'Barbershop',
       'service.barber.desc': 'Men\'s haircuts, beard design and classic shaves with hot towels.',
       'service.barber.price': 'From $25,000 COP',
+
+      'beforeAfter.eyebrow': 'Real results',
+      'beforeAfter.title': 'Before & after',
+      'beforeAfter.text': 'Drag the slider to see the transformation.',
+      'beforeAfter.labelBefore': 'Before',
+      'beforeAfter.labelAfter': 'After',
+      'beforeAfter.caption1': 'Color & highlights',
+      'beforeAfter.caption2': 'Haircut',
+      'beforeAfter.caption3': 'Hair treatment',
 
       'gallery.eyebrow': 'Inspiration',
       'gallery.title': 'Gallery',
